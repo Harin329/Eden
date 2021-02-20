@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
-import MapKit
+import GoogleMaps
 
-struct Garden: Identifiable {
+struct Garden: Identifiable{
     let id = UUID()
     let name: String
-    let rating: Int
-    let description: String
+    let address: String
     let latitude: Double
     let longitude: Double
-    var coordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    var coordinate: GMSMarker {
+        GMSMarker(position: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
     }
 }

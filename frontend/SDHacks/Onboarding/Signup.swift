@@ -13,6 +13,8 @@ struct Signup: View {
     @State private var password: String = ""
     @State private var password2: String = ""
     @Binding var login: Bool
+    @Binding var map: Bool
+
 
     var body: some View {
         VStack {
@@ -33,7 +35,7 @@ struct Signup: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             
-            NavigationLink(destination: Name(login: $login)) {
+            NavigationLink(destination: Name(login: $login, map: $map)) {
                 HStack {
                     Text("Sign up")
                         .foregroundColor(Color(hex: "#fff"))
@@ -51,6 +53,8 @@ struct Signup: View {
 struct Name: View {
     @State private var name: String = ""
     @Binding var login: Bool
+    @Binding var map: Bool
+
 
 //    @Binding var login: Bool
 
@@ -67,7 +71,7 @@ struct Name: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             
-            NavigationLink(destination: Skill(login: $login)) {
+            NavigationLink(destination: Skill(login: $login, map: $map)) {
                 HStack {
                     Text("Next")
                         .foregroundColor(Color(hex: "#fff"))
@@ -85,6 +89,8 @@ struct Name: View {
 struct Skill: View {
     @State private var selectedStrength = "Mild"
     @Binding var login: Bool
+    @Binding var map: Bool
+
 
     let strengths = ["Mild", "Medium", "Mature"]
 
@@ -102,7 +108,7 @@ struct Skill: View {
                 }
             }
             
-            NavigationLink(destination: Postal(login: $login)) {
+            NavigationLink(destination: Postal(login: $login, map: $map)) {
                 HStack {
                     Text("Next")
                         .foregroundColor(Color(hex: "#fff"))
@@ -120,6 +126,8 @@ struct Skill: View {
 struct Postal: View {
     @State private var postal: String = ""
     @Binding var login: Bool
+    @Binding var map: Bool
+
 
     var body: some View {
         VStack {
@@ -136,6 +144,7 @@ struct Postal: View {
             
             Button(action: {
                 self.login = false
+                self.map = true
             }) {
                 HStack {
                     Text("Next")

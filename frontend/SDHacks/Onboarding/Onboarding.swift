@@ -12,6 +12,8 @@ struct Onboarding: View {
     let bodies = ["Take a photo of food you \ncannot finish", "Seal, pack, and schedule pickup \nof your surplus food","Locate donation hotspots and \nfood items in demand", "Rely on our driver to deliver your \nfood safely to non-profit recipient"]
     @State var slide = 0
     @Binding var login: Bool
+    @Binding var map: Bool
+
 
     var body: some View {
         NavigationView {
@@ -38,7 +40,7 @@ struct Onboarding: View {
                     .padding(.bottom, 20)
                 }
                 ImageSlider(slide: $slide).offset(y:-50)
-                NavigationLink(destination: Signup(login: $login)) {
+                NavigationLink(destination: Signup(login: $login, map: $map)) {
                     HStack {
                         Text("Sign up")
                             .foregroundColor(Color(hex: "#fff"))

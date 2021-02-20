@@ -18,13 +18,14 @@
 		B800E80F25E0ADDF00557025 /* GardenMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E80E25E0ADDF00557025 /* GardenMap.swift */; };
 		B800E81425E0AE0900557025 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E81325E0AE0900557025 /* RoundedCorners.swift */; };
 		B800E81825E0AE9B00557025 /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E81725E0AE9A00557025 /* Garden.swift */; };
-		B800E81B25E0AF2000557025 /* DetailedGarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E81A25E0AF2000557025 /* DetailedGarden.swift */; };
 		B800E81E25E0AF4900557025 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E81D25E0AF4900557025 /* HexColor.swift */; };
 		B800E82125E0B02D00557025 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E82025E0B02D00557025 /* SearchBar.swift */; };
 		B800E82525E0BE6B00557025 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E82425E0BE6A00557025 /* Onboarding.swift */; };
 		B800E82925E0C01D00557025 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E82825E0C01D00557025 /* Signup.swift */; };
 		B800E83125E0C94500557025 /* GoogleMapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E83025E0C94500557025 /* GoogleMapsView.swift */; };
 		B800E83525E0CA3800557025 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E83425E0CA3800557025 /* LocationManager.swift */; };
+		B800E84125E1089D00557025 /* GardenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E84025E1089D00557025 /* GardenList.swift */; };
+		B800E84525E1180E00557025 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E84425E1180E00557025 /* Dashboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,13 +42,14 @@
 		B800E80E25E0ADDF00557025 /* GardenMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenMap.swift; sourceTree = "<group>"; };
 		B800E81325E0AE0900557025 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		B800E81725E0AE9A00557025 /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
-		B800E81A25E0AF2000557025 /* DetailedGarden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGarden.swift; sourceTree = "<group>"; };
 		B800E81D25E0AF4900557025 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		B800E82025E0B02D00557025 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B800E82425E0BE6A00557025 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		B800E82825E0C01D00557025 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		B800E83025E0C94500557025 /* GoogleMapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsView.swift; sourceTree = "<group>"; };
 		B800E83425E0CA3800557025 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B800E84025E1089D00557025 /* GardenList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenList.swift; sourceTree = "<group>"; };
+		B800E84425E1180E00557025 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		CC1C98A2817B19A9A6E4B254 /* Pods-SDHacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDHacks.debug.xcconfig"; path = "Target Support Files/Pods-SDHacks/Pods-SDHacks.debug.xcconfig"; sourceTree = "<group>"; };
 		E74D53B2350F54C97C12F028 /* Pods-SDHacks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDHacks.release.xcconfig"; path = "Target Support Files/Pods-SDHacks/Pods-SDHacks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 		B800E7F025E0AAAB00557025 /* SDHacks */ = {
 			isa = PBXGroup;
 			children = (
+				B800E84325E117E100557025 /* Dashboard */,
 				B800E82325E0BE4D00557025 /* Onboarding */,
 				B800E81225E0ADEC00557025 /* Extension */,
 				B800E80D25E0AD1400557025 /* Models */,
@@ -138,9 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				B800E80E25E0ADDF00557025 /* GardenMap.swift */,
-				B800E81A25E0AF2000557025 /* DetailedGarden.swift */,
 				B800E82025E0B02D00557025 /* SearchBar.swift */,
 				B800E83025E0C94500557025 /* GoogleMapsView.swift */,
+				B800E84025E1089D00557025 /* GardenList.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -170,6 +173,14 @@
 				B800E82825E0C01D00557025 /* Signup.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B800E84325E117E100557025 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B800E84425E1180E00557025 /* Dashboard.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,10 +302,11 @@
 				B800E7F425E0AAAB00557025 /* SceneDelegate.swift in Sources */,
 				B800E80F25E0ADDF00557025 /* GardenMap.swift in Sources */,
 				B800E83125E0C94500557025 /* GoogleMapsView.swift in Sources */,
-				B800E81B25E0AF2000557025 /* DetailedGarden.swift in Sources */,
 				B800E82925E0C01D00557025 /* Signup.swift in Sources */,
 				B800E82525E0BE6B00557025 /* Onboarding.swift in Sources */,
+				B800E84525E1180E00557025 /* Dashboard.swift in Sources */,
 				B800E80A25E0ACED00557025 /* Home.swift in Sources */,
+				B800E84125E1089D00557025 /* GardenList.swift in Sources */,
 				B800E81425E0AE0900557025 /* RoundedCorners.swift in Sources */,
 				B800E83525E0CA3800557025 /* LocationManager.swift in Sources */,
 				B800E82125E0B02D00557025 /* SearchBar.swift in Sources */,
