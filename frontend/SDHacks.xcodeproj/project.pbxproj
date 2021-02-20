@@ -27,6 +27,11 @@
 		B800E84125E1089D00557025 /* GardenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E84025E1089D00557025 /* GardenList.swift */; };
 		B800E84525E1180E00557025 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E84425E1180E00557025 /* Dashboard.swift */; };
 		BEE631CF25E19C06009144B3 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631CE25E19C06009144B3 /* Plant.swift */; };
+		B800E84925E191B500557025 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E84825E191B500557025 /* DropDown.swift */; };
+		B800E84D25E1922600557025 /* DashboardHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E84C25E1922600557025 /* DashboardHead.swift */; };
+		B800E85125E1992B00557025 /* NearbyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E85025E1992B00557025 /* NearbyCard.swift */; };
+		B800E85425E19CAD00557025 /* PlantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E85325E19CAD00557025 /* PlantCard.swift */; };
+		B800E85725E1A32600557025 /* PlantScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E85625E1A32600557025 /* PlantScroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +57,11 @@
 		B800E84025E1089D00557025 /* GardenList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenList.swift; sourceTree = "<group>"; };
 		B800E84425E1180E00557025 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		BEE631CE25E19C06009144B3 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		B800E84825E191B500557025 /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
+		B800E84C25E1922600557025 /* DashboardHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHead.swift; sourceTree = "<group>"; };
+		B800E85025E1992B00557025 /* NearbyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyCard.swift; sourceTree = "<group>"; };
+		B800E85325E19CAD00557025 /* PlantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCard.swift; sourceTree = "<group>"; };
+		B800E85625E1A32600557025 /* PlantScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantScroll.swift; sourceTree = "<group>"; };
 		CC1C98A2817B19A9A6E4B254 /* Pods-SDHacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDHacks.debug.xcconfig"; path = "Target Support Files/Pods-SDHacks/Pods-SDHacks.debug.xcconfig"; sourceTree = "<group>"; };
 		E74D53B2350F54C97C12F028 /* Pods-SDHacks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDHacks.release.xcconfig"; path = "Target Support Files/Pods-SDHacks/Pods-SDHacks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +192,11 @@
 			isa = PBXGroup;
 			children = (
 				B800E84425E1180E00557025 /* Dashboard.swift */,
+				B800E84825E191B500557025 /* DropDown.swift */,
+				B800E84C25E1922600557025 /* DashboardHead.swift */,
+				B800E85025E1992B00557025 /* NearbyCard.swift */,
+				B800E85325E19CAD00557025 /* PlantCard.swift */,
+				B800E85625E1A32600557025 /* PlantScroll.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -310,15 +325,20 @@
 			files = (
 				B800E81825E0AE9B00557025 /* Garden.swift in Sources */,
 				B800E7F225E0AAAB00557025 /* AppDelegate.swift in Sources */,
+				B800E85125E1992B00557025 /* NearbyCard.swift in Sources */,
 				B800E7F425E0AAAB00557025 /* SceneDelegate.swift in Sources */,
 				B800E80F25E0ADDF00557025 /* GardenMap.swift in Sources */,
 				B800E83125E0C94500557025 /* GoogleMapsView.swift in Sources */,
 				BEE631CF25E19C06009144B3 /* Plant.swift in Sources */,
 				B800E82925E0C01D00557025 /* Signup.swift in Sources */,
+				B800E84925E191B500557025 /* DropDown.swift in Sources */,
+				B800E84D25E1922600557025 /* DashboardHead.swift in Sources */,
 				B800E82525E0BE6B00557025 /* Onboarding.swift in Sources */,
+				B800E85425E19CAD00557025 /* PlantCard.swift in Sources */,
 				B800E84525E1180E00557025 /* Dashboard.swift in Sources */,
 				B800E80A25E0ACED00557025 /* Home.swift in Sources */,
 				B800E84125E1089D00557025 /* GardenList.swift in Sources */,
+				B800E85725E1A32600557025 /* PlantScroll.swift in Sources */,
 				B800E81425E0AE0900557025 /* RoundedCorners.swift in Sources */,
 				B800E83525E0CA3800557025 /* LocationManager.swift in Sources */,
 				B800E82125E0B02D00557025 /* SearchBar.swift in Sources */,
