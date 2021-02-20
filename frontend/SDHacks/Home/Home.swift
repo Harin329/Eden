@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Home: View {
-    @State var login = true
+    @State var login = false
     @State var map = false
     var body: some View {
         ZStack {

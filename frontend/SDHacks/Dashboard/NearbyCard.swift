@@ -67,10 +67,10 @@ struct NearbyCard: View {
                 Spacer()
             }
             .padding(.trailing,10)
-        }.frame(width: UIScreen.main.bounds.width - 50, height: 130)
+        }.frame(width: UIScreen.main.bounds.width - 50, height: 100)
         .background(Rectangle()
                         .fill(Color.white)
-                        .frame(width: UIScreen.main.bounds.width - 50, height: 130)
+                        .frame(width: UIScreen.main.bounds.width - 50, height: 110)
                         .cornerRadius(10)
                         .shadow(radius: 0 )
                         )

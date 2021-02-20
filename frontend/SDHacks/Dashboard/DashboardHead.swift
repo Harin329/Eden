@@ -26,14 +26,26 @@ struct DashboardHead: View {
             VStack {
                 HStack{
                     Button(action: {}) {
-                        Circle()
-                            .fill(Color.gray)
-                            .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        ZStack {
+                            Circle()
+                                .fill(Color.white)
+                                .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            Image("dashboardSearch")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 18)
+                        }
                     }.padding(.trailing, 5)
                     Button(action: {}) {
-                        Circle()
-                            .fill(Color.gray)
-                            .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        ZStack {
+                            Circle()
+                                .fill(Color.white)
+                                .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            Image("dashboardMap")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 18)
+                        }
                     }
                 }.padding(.trailing, 25)
                 Spacer()

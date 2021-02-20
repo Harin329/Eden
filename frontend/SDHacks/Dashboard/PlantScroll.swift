@@ -14,7 +14,7 @@ struct PlantScroll: View {
                 ForEach(0..<10) {_ in
                         PlantCard()
                     }
-            }.padding(.vertical, 20)
+            }.padding(.vertical, 15)
             .padding(.horizontal, 25)
         }
     }
