@@ -7,18 +7,33 @@
 
 import SwiftUI
 
+struct PlantType {
+    var plant_id: Int
+    var garden_id: Int
+    var plot_id: Int
+    var plant_type: String
+    var plant_name: String
+    var instruction: String
+}
+
 struct Plant: View {
+    var plantInfo: PlantType
+    
     var body: some View {
         VStack {
             HStack {
-                Image("Back")
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 30)
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Image("Back")
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 30)
+                })
                 Spacer()
-                Image("Report")
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing, 30)
-            }.padding(.bottom, 10)
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Image("Report")
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                        .padding(.trailing, 30)
+                })
+            }.padding(.bottom, 10).padding(.top, 30)
             HStack {
                 Image("Water")
                     .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
@@ -41,7 +56,7 @@ struct Plant: View {
                         Spacer()
                     }.padding(.bottom, 1)
                     HStack {
-                        Text("Julie").font(.system(size: 25)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
+                        Text(plantInfo.plant_name).font(.system(size: 25)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
                         Spacer()
                     }.padding(.bottom, 3)
                     HStack {
@@ -124,13 +139,13 @@ struct Plant: View {
             }.padding(.leading, 30)
             Spacer()
             Text("Help it")
-        }
+        }.background(Color.white)
         
     }
 }
 
-struct Plant_Previews: PreviewProvider {
-    static var previews: some View {
-        Plant()
-    }
-}
+//struct Plant_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Plant()
+//    }
+//}

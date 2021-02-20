@@ -12,7 +12,8 @@ struct PlantScroll: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
                 ForEach(0..<10) {_ in
-                        PlantCard()
+                    let pInfo = PlantType(plant_id: 1, garden_id: 1, plot_id: 1, plant_type: "Tomato Plant", plant_name: "Alex", instruction: "Water")
+                    PlantCard(plantInfo: pInfo)
                     }
             }.padding(.vertical, 15)
             .padding(.horizontal, 25)

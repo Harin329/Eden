@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct PlantCard: View {
+    var plantInfo: PlantType
+    
     var body: some View {
-        NavigationLink(destination: VStack{}) { // direct Plant Profile
+        NavigationLink(destination: Plant(plantInfo: plantInfo)) {
             VStack {
                 Image("dashboard2")
                     .resizable()
@@ -73,8 +75,8 @@ struct PlantCard: View {
     }
 }
 
-struct PlantCard_Previews: PreviewProvider {
-    static var previews: some View {
-        PlantCard()
-    }
-}
+//struct PlantCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlantCard()
+//    }
+//}
