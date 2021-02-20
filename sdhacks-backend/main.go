@@ -9,6 +9,8 @@ import (
     "sdhacks-backend/src/handlers/harin"
     "sdhacks-backend/src/handlers/garden"
     "sdhacks-backend/src/handlers/plot"
+    "sdhacks-backend/src/handlers/plant"
+    "sdhacks-backend/src/handlers/contribution"
 )
 
 func home(w http.ResponseWriter, r *http.Request) {
@@ -53,6 +55,15 @@ func main() {
     // Plot
     plotapi := r.PathPrefix("/plot").Subrouter()
     plotapi.HandleFunc("/{gardenID}", plot.Params).Methods(http.MethodGet)
+
+    // Plant
+    plantapi := r.PathPrefix("/plant").Subrouter()
+    plantapi.HandleFunc("/{plotID}", plant.Params).Methods(http.MethodGet)
+
+    // Contribution
+    contributionapi := r.PathPrefix("/contribution").Subrouter()
+    contributionapi.HandleFunc("", contribution.Post).Methods(http.MethodPost)
+    contributionapi.HandleFunc("/{userID}", contribution.Params).Methods(http.MethodGet)
 
     log.Fatal(http.ListenAndServe(":3000", r))
 }

@@ -19,6 +19,8 @@ type Garden struct {
     GardenID      int `gorm:"primary_key"`
     Name string
     Location string
+    Latitude float64
+    Longitude float64
 }
 
 type Plot struct {
@@ -35,6 +37,8 @@ type PlotImages struct {
 
 type Plant struct {
     PlantID      int `gorm:"primary_key"`
+    GardenID    int
+    PlotID      int
     PlantType string
     PlantName string
     Instruction string
@@ -53,12 +57,13 @@ type PlantImages struct {
 }
 
 type Contribution struct {
-    ContributionID      int `gorm:"primary_key"`
+    ContributionID      int `gorm:"primary_key";"AUTO_INCREMENT"`
     UserID int
     GardenID int
     PlotID int
     PlantID int
     Date time.Time
+    ContributionType string
 }
 
 type User struct {
@@ -66,15 +71,11 @@ type User struct {
     FirstName string
     LastName string
     Email   string
-    PhotoURI   string
 }
 
 var db *gorm.DB
 var errDB error
 
-// Functions of type `txnFunc` are passed as arguments to the
-// `ExecuteTx` wrapper that handles transaction retries
-type txnFunc func(*gorm.DB) error
 
 func Start() {
     err := godotenv.Load()
@@ -95,13 +96,16 @@ func Start() {
     // Automatically create the tables based on the models.
     db.AutoMigrate(&Garden{})
     db.AutoMigrate(&Plot{})
+    db.AutoMigrate(&Plant{})
+    db.AutoMigrate(&User{})
+    db.AutoMigrate(&Contribution{})
 
     // Insert data rows into the "garden" table.
-    db.Create(&Garden{GardenID: 1, Location: "4300 Allen School Lane, San Diego", Name:"Allen School Garden"})
-    db.Create(&Garden{GardenID: 2, Location: "30 Murray St, San Diego", Name:"Hilltop Drive"})
-    db.Create(&Garden{GardenID: 3, Location: "845 Broadway, San Diego", Name:"Intergenerational Community Garden"})
-    db.Create(&Garden{GardenID: 4, Location: "960 Fifth Ave, San Diego", Name:"Mosaic Community Garden of Chula Vista"})
-    db.Create(&Garden{GardenID: 5, Location: "171 Palomar St, San Diego", Name:"Palomar Apartments Community Garden"})
+    db.Create(&Garden{GardenID: 1, Location: "4300 Allen School Lane, San Diego", Name:"Allen School Garden", Latitude: 32.656000, Longitude:-117.033400})
+    db.Create(&Garden{GardenID: 2, Location: "30 Murray St, San Diego", Name:"Hilltop Drive", Latitude: 32.631480, Longitude:-117.063630})
+    db.Create(&Garden{GardenID: 3, Location: "845 Broadway, San Diego", Name:"Intergenerational Community Garden", Latitude: 32.715550, Longitude:-117.156830})
+    db.Create(&Garden{GardenID: 4, Location: "960 Fifth Ave, San Diego", Name:"Mosaic Community Garden of Chula Vista", Latitude: 32.715430, Longitude:-117.160460})
+    db.Create(&Garden{GardenID: 5, Location: "171 Palomar St, San Diego", Name:"Palomar Apartments Community Garden", Latitude: 32.608700, Longitude:-117.060360})
     GetAllGardens()
 
     db.Create(&Plot{PlotID: 1, GardenID: 1, Name: "E1"})
@@ -110,54 +114,19 @@ func Start() {
     db.Create(&Plot{PlotID: 4, GardenID: 2, Name: "E1"})
     db.Create(&Plot{PlotID: 5, GardenID: 2, Name: "F1"})
 
+    db.Create(&Plant{PlantID: 1, GardenID: 1, PlotID: 1, PlantType: "Grape Plant", PlantName: "Grapey", Instruction: "Water Them Freely"})
+    db.Create(&Plant{PlantID: 2, GardenID: 1, PlotID: 1, PlantType: "Tomato Plant", PlantName: "Tom", Instruction: "Pick the fresh tomatoes!"})
+    db.Create(&Plant{PlantID: 3, GardenID: 1, PlotID: 1, PlantType: "Basil Plant", PlantName: "Neymar", Instruction: "Needs phosphate fertilization (2 cups)"})
+    db.Create(&Plant{PlantID: 4, GardenID: 1, PlotID: 3, PlantType: "Roses", PlantName: "Love", Instruction: "Prune them 5cm at the root"})
+    db.Create(&Plant{PlantID: 5, GardenID: 1, PlotID: 3, PlantType: "Palm Tree", PlantName: "Big Boi", Instruction: "Bacteria infection, requires care from professionals"})
 
-    // The amount to be transferred between the accounts.
-    // var amount = 100
+    db.Create(&User{UserID: 1, FirstName: "Harin", LastName: "Wu", Email: "harinwu99@gmail.com"})
 
-    // Transfer funds between accounts.  To handle potential
-    // transaction retry errors, we wrap the call to `transferFunds`
-    // in `crdbgorm.ExecuteTx`, a helper function for GORM which
-    // implements a retry loop
-    // if err := crdbgorm.ExecuteTx(context.Background(), db, nil,
-    //     func(tx *gorm.DB) error {
-    //         return transferFunds(tx, fromID, toID, amount)
-    //     },
-    // ); err != nil {
-    //     // For information and reference documentation, see:
-    //     //   https://www.cockroachlabs.com/docs/stable/error-handling-and-troubleshooting.html
-    //     fmt.Println(err)
-    // }
+    // Don't Create Too Many
+    // db.Create(&Contribution{UserID: 1, GardenID: 1, PlotID: 1, PlantID: 1, Date: time.Now(), ContributionType: "Water"})
+    // db.Create(&Contribution{UserID: 1, GardenID: 1, PlotID: 1, PlantID: 1, Date: time.Now(), ContributionType: "Fertilize"})
 
-    // Print balances after transfer to ensure that it worked.
-    // GetAllGardens(db)
-
-    // Delete accounts so we can start fresh when we want to run this
-    // program again.
-    // deleteAccounts(db)
 }
-
-// func transferFunds(db *gorm.DB, fromID int, toID int, amount int) error {
-//     var fromAccount Account
-//     var toAccount Account
-
-//     db.First(&fromAccount, fromID)
-//     db.First(&toAccount, toID)
-
-//     if fromAccount.Balance < amount {
-//         return fmt.Errorf("account %d balance %d is lower than transfer amount %d", fromAccount.ID, fromAccount.Balance, amount)
-//     }
-
-//     fromAccount.Balance -= amount
-//     toAccount.Balance += amount
-
-//     if err := db.Save(&fromAccount).Error; err != nil {
-//         return err
-//     }
-//     if err := db.Save(&toAccount).Error; err != nil {
-//         return err
-//     }
-//     return nil
-// }
 
 func GetAllGardens() []Garden {
     var gardens []Garden
@@ -175,12 +144,22 @@ func GetPlotsByGarden(gardenID int) []Plot {
     return plots
 }
 
-// func deleteAccounts(db *gorm.DB) error {
-//     // Used to tear down the accounts table so we can re-run this
-//     // program.
-//     err := db.Exec("DELETE from accounts where ID > 0").Error
-//     if err != nil {
-//         return err
-//     }
-//     return nil
-// }
+func GetPlantsByPlot(plotID int) []Plant {
+    var plants []Plant
+    db.Where("plot_id = ?", plotID).Find(&plants)
+    return plants
+}
+
+func CreateContribution(contribution *Contribution) int64 {
+    // contribution := Contribution{UserID: userID, GardenID: gardenID, PlotID: plotID, PlantID: plantID, Date: time.Now(), ContributionType: contributionType}
+
+    result := db.Create(&contribution) // pass pointer of data to Create
+
+    return result.RowsAffected   
+}
+
+func GetContributionsByUser(userID int) []Contribution {
+    var contributions []Contribution
+    db.Where("user_id = ?", userID).Find(&contributions)
+    return contributions
+}

@@ -16,18 +16,6 @@ type Plot struct {
     Location 	string `json:"Location"`
 }
 
-func Get(w http.ResponseWriter, r *http.Request) {
-	response, err := json.Marshal(database.GetAllGardens())
-	if err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
-		w.Write([]byte(err.Error()))
-		return
-	}
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(response))
-}
-
 func Params(w http.ResponseWriter, r *http.Request) {
     pathParams := mux.Vars(r)
     w.Header().Set("Content-Type", "application/json")

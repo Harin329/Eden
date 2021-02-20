@@ -14,6 +14,8 @@ type Garden struct {
     GardenID      int `json:"GardenID"`
 	Name		string `json:"Name"`
     Location 	string `json:"Location"`
+	Latitude	float64 `json:"Latitude"`
+	Longitude	float64 `json:"Longitude"`
 }
 
 func Get(w http.ResponseWriter, r *http.Request) {
