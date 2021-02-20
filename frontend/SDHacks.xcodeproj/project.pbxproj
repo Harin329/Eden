@@ -26,6 +26,7 @@
 		B800E83525E0CA3800557025 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E83425E0CA3800557025 /* LocationManager.swift */; };
 		B800E84125E1089D00557025 /* GardenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E84025E1089D00557025 /* GardenList.swift */; };
 		B800E84525E1180E00557025 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E84425E1180E00557025 /* Dashboard.swift */; };
+		BEE631CF25E19C06009144B3 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631CE25E19C06009144B3 /* Plant.swift */; };
 		B800E84925E191B500557025 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E84825E191B500557025 /* DropDown.swift */; };
 		B800E84D25E1922600557025 /* DashboardHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E84C25E1922600557025 /* DashboardHead.swift */; };
 		B800E85125E1992B00557025 /* NearbyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E85025E1992B00557025 /* NearbyCard.swift */; };
@@ -56,6 +57,7 @@
 		B800E83425E0CA3800557025 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B800E84025E1089D00557025 /* GardenList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenList.swift; sourceTree = "<group>"; };
 		B800E84425E1180E00557025 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		BEE631CE25E19C06009144B3 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		B800E84825E191B500557025 /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		B800E84C25E1922600557025 /* DashboardHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHead.swift; sourceTree = "<group>"; };
 		B800E85025E1992B00557025 /* NearbyCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyCard.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		B800E7F025E0AAAB00557025 /* SDHacks */ = {
 			isa = PBXGroup;
 			children = (
+				BEE631CD25E19BDE009144B3 /* Plant */,
 				B800E84325E117E100557025 /* Dashboard */,
 				B800E82325E0BE4D00557025 /* Onboarding */,
 				B800E81225E0ADEC00557025 /* Extension */,
@@ -199,6 +202,14 @@
 				B800E85925E1AC3500557025 /* RecentContributors.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		BEE631CD25E19BDE009144B3 /* Plant */ = {
+			isa = PBXGroup;
+			children = (
+				BEE631CE25E19C06009144B3 /* Plant.swift */,
+			);
+			path = Plant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 				B800E7F425E0AAAB00557025 /* SceneDelegate.swift in Sources */,
 				B800E80F25E0ADDF00557025 /* GardenMap.swift in Sources */,
 				B800E83125E0C94500557025 /* GoogleMapsView.swift in Sources */,
+				BEE631CF25E19C06009144B3 /* Plant.swift in Sources */,
 				B800E82925E0C01D00557025 /* Signup.swift in Sources */,
 				B800E84925E191B500557025 /* DropDown.swift in Sources */,
 				B800E84D25E1922600557025 /* DashboardHead.swift in Sources */,
@@ -477,9 +489,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SDHacks/Preview Content\"";
-				DEVELOPMENT_TEAM = 4HBR3Z2SY9;
+				DEVELOPMENT_TEAM = 35ZK849627;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SDHacks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,9 +512,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SDHacks/Preview Content\"";
-				DEVELOPMENT_TEAM = 4HBR3Z2SY9;
+				DEVELOPMENT_TEAM = 35ZK849627;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SDHacks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
