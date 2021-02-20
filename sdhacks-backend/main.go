@@ -1,6 +1,7 @@
 package main
 
 import (
+    "fmt"
     "log"
 	"net/http"
 
@@ -64,6 +65,7 @@ func main() {
     contributionapi := r.PathPrefix("/contribution").Subrouter()
     contributionapi.HandleFunc("", contribution.Post).Methods(http.MethodPost)
     contributionapi.HandleFunc("/{userID}", contribution.Params).Methods(http.MethodGet)
+    fmt.Printf("Starting Now!")
 
-    log.Fatal(http.ListenAndServe(":3000", r))
+    log.Fatal(http.ListenAndServe(":8080", r))
 }
