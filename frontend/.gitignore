@@ -1,5 +1,6 @@
 # Mac OS X Finder
 .DS_Store
+../.DS_Store
 
 # Private Keys
 *.pem

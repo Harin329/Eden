@@ -10,41 +10,48 @@ import SwiftUI
 struct Dashboard: View {
     var body: some View {
         NavigationView {
-            ZStack {
-                DashboardHead()
-                Button(action: {}){
-                    NearbyCard()
-                }.foregroundColor(.black)
-                .offset(y: -200)
-                HStack {
-                    Button(action:{}) {
-                        Text("Plots")
-                            .font(.system(size: 26))
-                            .foregroundColor(.black)
-                    }.padding(.trailing, 20)
-                    Button(action:{}) {
-                        Text("Saved")
-                            .font(.system(size: 26))
-                            .foregroundColor(.gray)
-                    }
-                    Spacer()
-                    Button(action:{}) {
-                        Text("See all")
-                            .font(.system(size: 18))
-                            .foregroundColor(.black)
-                    }
-                }
-                .padding(.horizontal, 25)
-                .offset(y: -90)
-                PlantScroll()
-                    .offset(y: 110)
-            }.navigationBarTitle("")
-            .navigationBarHidden(true)
-            .background(
-                Image("dashboardBG")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+            ScrollView(showsIndicators: false) {
+                ZStack {
+                    DashboardHead()
+                        .zIndex(1.0)
+                    VStack {
+                        Button(action: {}){
+                            NearbyCard()
+                        }.foregroundColor(.black)
+                        HStack {
+                            Button(action:{}) {
+                                Text("Plots")
+                                    .font(.system(size: 26))
+                                    .foregroundColor(.black)
+                            }.padding(.trailing, 20)
+                            Button(action:{}) {
+                                Text("Saved")
+                                    .font(.system(size: 26))
+                                    .foregroundColor(.gray)
+                            }
+                            Spacer()
+                            Button(action:{}) {
+                                Text("See all")
+                                    .font(.system(size: 18))
+                                    .foregroundColor(.black)
+                            }
+                        }
+                        .padding(.top, 25)
+                        .padding(.horizontal, 25)
+                        PlantScroll()
+                            .offset(y: -10)
+                        RecentContributors()
+                            .padding(.bottom, 80)
+                    }.offset(y: 85)
+                }.navigationBarTitle("")
+                .navigationBarHidden(true)
+                .background(
+                    Image("dashboardBG")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                        .offset(y: -85))
+            }
         }.accentColor( Color(hex: "#000"))
     }
 }

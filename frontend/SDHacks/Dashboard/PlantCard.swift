@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlantCard: View {
     var body: some View {
-        NavigationLink(destination: VStack{}) {
+        NavigationLink(destination: VStack{}) { // direct Plant Profile
             VStack {
                 Image("dashboard2")
                     .resizable()
@@ -19,25 +19,25 @@ struct PlantCard: View {
                     .clipped()
                 HStack {
                     Circle()
+                        .fill(Color(hex: "D8E8F1"))
                         .frame(width: 25, height: 25)
                     Circle()
+                        .fill(Color(hex: "DECBF0"))
                         .frame(width: 25, height: 25)
                     Circle()
+                        .fill(Color(hex: "FADDDD"))
                         .frame(width: 25, height: 25)
                     Spacer()
-                    ZStack {
-                        Image("dashboardPeople")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20)
-                            .offset(y: -5)
-                        Text("67")
-                            .foregroundColor(Color(hex: "434343"))
-                            .font(.system(size: 10))
-                            .padding(0)
-                            .offset(y:7)
-                    }
-                    .frame(height: 25)
+                    Image("dashboardPeople")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 15)
+                        .offset(x: 5)
+                    Text("67")
+                        .foregroundColor(Color(hex: "C1C1C1"))
+                        .font(.system(size: 12))
+                        .bold()
+                        .padding(0)
                 }.padding(.bottom, 3)
                 .padding(.leading, 10)
                 .padding(.trailing, 10)
