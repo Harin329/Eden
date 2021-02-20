@@ -51,11 +51,77 @@ struct Plant: View {
                 }.padding(.leading, 30)
                 Spacer()
                 VStack {
-                    Text("64 contributors").font(.system(size: 16)).foregroundColor(Color(hex: "#848484")).fontWeight(.medium).padding(.all, 5).border(Color(hex: "#848484"), width: 3).cornerRadius(10)
+                    HStack {
+                        Button(action: {}, label: {
+                            Text("64 contributors").font(.system(size: 16)).foregroundColor(Color(hex: "#848484")).fontWeight(.medium).padding(.all, 5)
+                        })
+                    
+                    }
                 }.padding(.trailing, 30)
             }.padding(.bottom, 10)
-            Text("Image and Info")
-            Text("Help it grow")
+            HStack {
+                Image("Tomato Plant")
+                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 30)
+                Spacer()
+                VStack {
+                    HStack {
+                        Image("Harvest")
+                            .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
+                            .padding(.leading, 10)
+                        VStack {
+                            HStack {
+                                Text("30").font(.system(size: 18)).foregroundColor(Color(hex: "#68C883")).fontWeight(.medium)
+                                Spacer()
+                            }
+                            HStack{
+                                Text("Days").font(.system(size: 18)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
+                                Spacer()
+                            }
+                        }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
+                        .padding(.trailing, 30)
+                    }
+                    HStack {
+                        Image("Harvest")
+                            .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
+                            .padding(.leading, 10)
+                        VStack {
+                            HStack {
+                                Text("12 cm").font(.system(size: 18)).foregroundColor(Color(hex: "#68C883")).fontWeight(.medium)
+                                Spacer()
+                            }
+                            HStack{
+                                Text("Height").font(.system(size: 18)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
+                                Spacer()
+                            }
+                        }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
+                        .padding(.trailing, 30)
+                    }
+                    HStack {
+                        Image("Harvest")
+                            .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
+                            .padding(.leading, 10)
+                        VStack {
+                            HStack {
+                                Text("Medium").font(.system(size: 18)).foregroundColor(Color(hex: "#68C883")).fontWeight(.medium)
+                                Spacer()
+                            }
+                            HStack{
+                                Text("Water").font(.system(size: 18)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
+                                Spacer()
+                            }
+                        }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
+                        .padding(.trailing, 30)
+                    }
+                }
+            }
+            HStack {
+                Button(action: {}, label: {
+                    Text("Help me grow").font(.system(size: 16)).foregroundColor(Color.white).fontWeight(.medium).padding(.all, 5).padding(.all, 10)
+                })
+                .background(Color(hex: "#3A3A3A")).cornerRadius(10)
+                Spacer()
+            }.padding(.leading, 30)
             Spacer()
             Text("Help it")
         }

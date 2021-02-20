@@ -41,3 +41,5 @@ Pods/
 
 # Google Plist
 GoogleService-Info.plist
+
+.DS_Store
