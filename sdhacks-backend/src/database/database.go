@@ -93,34 +93,35 @@ func Start() {
     // Set to `true` and GORM will print out all DB queries.
     db.LogMode(false)
 
+    // Init Code
     // Automatically create the tables based on the models.
-    db.AutoMigrate(&Garden{})
-    db.AutoMigrate(&Plot{})
-    db.AutoMigrate(&Plant{})
-    db.AutoMigrate(&User{})
-    db.AutoMigrate(&Contribution{})
+    // db.AutoMigrate(&Garden{})
+    // db.AutoMigrate(&Plot{})
+    // db.AutoMigrate(&Plant{})
+    // db.AutoMigrate(&User{})
+    // db.AutoMigrate(&Contribution{})
 
-    // Insert data rows into the "garden" table.
-    db.Create(&Garden{GardenID: 1, Location: "4300 Allen School Lane, San Diego", Name:"Allen School Garden", Latitude: 32.656000, Longitude:-117.033400})
-    db.Create(&Garden{GardenID: 2, Location: "30 Murray St, San Diego", Name:"Hilltop Drive", Latitude: 32.631480, Longitude:-117.063630})
-    db.Create(&Garden{GardenID: 3, Location: "845 Broadway, San Diego", Name:"Intergenerational Community Garden", Latitude: 32.715550, Longitude:-117.156830})
-    db.Create(&Garden{GardenID: 4, Location: "960 Fifth Ave, San Diego", Name:"Mosaic Community Garden of Chula Vista", Latitude: 32.715430, Longitude:-117.160460})
-    db.Create(&Garden{GardenID: 5, Location: "171 Palomar St, San Diego", Name:"Palomar Apartments Community Garden", Latitude: 32.608700, Longitude:-117.060360})
-    GetAllGardens()
+    // // Insert data rows into the "garden" table.
+    // db.Create(&Garden{GardenID: 1, Location: "4300 Allen School Lane, San Diego", Name:"Allen School Garden", Latitude: 32.656000, Longitude:-117.033400})
+    // db.Create(&Garden{GardenID: 2, Location: "30 Murray St, San Diego", Name:"Hilltop Drive", Latitude: 32.631480, Longitude:-117.063630})
+    // db.Create(&Garden{GardenID: 3, Location: "845 Broadway, San Diego", Name:"Intergenerational Community Garden", Latitude: 32.715550, Longitude:-117.156830})
+    // db.Create(&Garden{GardenID: 4, Location: "960 Fifth Ave, San Diego", Name:"Mosaic Community Garden of Chula Vista", Latitude: 32.715430, Longitude:-117.160460})
+    // db.Create(&Garden{GardenID: 5, Location: "171 Palomar St, San Diego", Name:"Palomar Apartments Community Garden", Latitude: 32.608700, Longitude:-117.060360})
+    // GetAllGardens()
 
-    db.Create(&Plot{PlotID: 1, GardenID: 1, Name: "E1"})
-    db.Create(&Plot{PlotID: 2, GardenID: 1, Name: "E2"})
-    db.Create(&Plot{PlotID: 3, GardenID: 1, Name: "F1"})
-    db.Create(&Plot{PlotID: 4, GardenID: 2, Name: "E1"})
-    db.Create(&Plot{PlotID: 5, GardenID: 2, Name: "F1"})
+    // db.Create(&Plot{PlotID: 1, GardenID: 1, Name: "E1"})
+    // db.Create(&Plot{PlotID: 2, GardenID: 1, Name: "E2"})
+    // db.Create(&Plot{PlotID: 3, GardenID: 1, Name: "F1"})
+    // db.Create(&Plot{PlotID: 4, GardenID: 2, Name: "E1"})
+    // db.Create(&Plot{PlotID: 5, GardenID: 2, Name: "F1"})
 
-    db.Create(&Plant{PlantID: 1, GardenID: 1, PlotID: 1, PlantType: "Grape Plant", PlantName: "Grapey", Instruction: "Water Them Freely"})
-    db.Create(&Plant{PlantID: 2, GardenID: 1, PlotID: 1, PlantType: "Tomato Plant", PlantName: "Tom", Instruction: "Pick the fresh tomatoes!"})
-    db.Create(&Plant{PlantID: 3, GardenID: 1, PlotID: 1, PlantType: "Basil Plant", PlantName: "Neymar", Instruction: "Needs phosphate fertilization (2 cups)"})
-    db.Create(&Plant{PlantID: 4, GardenID: 1, PlotID: 3, PlantType: "Roses", PlantName: "Love", Instruction: "Prune them 5cm at the root"})
-    db.Create(&Plant{PlantID: 5, GardenID: 1, PlotID: 3, PlantType: "Palm Tree", PlantName: "Big Boi", Instruction: "Bacteria infection, requires care from professionals"})
+    // db.Create(&Plant{PlantID: 1, GardenID: 1, PlotID: 1, PlantType: "Grape Plant", PlantName: "Grapey", Instruction: "Water Them Freely"})
+    // db.Create(&Plant{PlantID: 2, GardenID: 1, PlotID: 1, PlantType: "Tomato Plant", PlantName: "Tom", Instruction: "Pick the fresh tomatoes!"})
+    // db.Create(&Plant{PlantID: 3, GardenID: 1, PlotID: 1, PlantType: "Basil Plant", PlantName: "Neymar", Instruction: "Needs phosphate fertilization (2 cups)"})
+    // db.Create(&Plant{PlantID: 4, GardenID: 1, PlotID: 3, PlantType: "Roses", PlantName: "Love", Instruction: "Prune them 5cm at the root"})
+    // db.Create(&Plant{PlantID: 5, GardenID: 1, PlotID: 3, PlantType: "Palm Tree", PlantName: "Big Boi", Instruction: "Bacteria infection, requires care from professionals"})
 
-    db.Create(&User{UserID: 1, FirstName: "Harin", LastName: "Wu", Email: "harinwu99@gmail.com"})
+    // db.Create(&User{UserID: 1, FirstName: "Harin", LastName: "Wu", Email: "harinwu99@gmail.com"})
 
     // Don't Create Too Many
     // db.Create(&Contribution{UserID: 1, GardenID: 1, PlotID: 1, PlantID: 1, Date: time.Now(), ContributionType: "Water"})
