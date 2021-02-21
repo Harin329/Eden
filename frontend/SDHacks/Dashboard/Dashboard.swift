@@ -20,7 +20,7 @@ struct Dashboard: View {
                         }.foregroundColor(.black)
                         HStack {
                             Button(action:{}) {
-                                Text("Plots")
+                                Text("Plants")
                                     .font(.system(size: 26))
                                     .foregroundColor(.black)
                             }.padding(.trailing, 20)

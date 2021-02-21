@@ -53,7 +53,7 @@ struct Plots: View {
                     }
                 }.frame(height: 50)
                 HStack {
-                    Text("Plots")
+                    Text("Plants")
                         .font(.system(size: 26))
                         .foregroundColor(Color(hex: "3A3A3A"))
                     Spacer()
