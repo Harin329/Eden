@@ -27,14 +27,14 @@ struct Calendar: View {
                 }.padding(.bottom, 10)
                 HStack {
                     VStack {
-                        Text("Harin's Monthly").font(.system(size: 16)).foregroundColor(Color(hex: "#C4C4C4")).padding(.leading, 25).padding(.top, 5).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
-                        Text("Greenhouse").font(.system(size: 20)).padding(.leading, 25).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
+                        Text("Harin's Monthly").font(.system(size: 16)).foregroundColor(Color(hex: "#C4C4C4")).padding(.leading, 20).padding(.top, 5).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
+                        Text("Greenhouse").font(.system(size: 20)).padding(.leading, 20).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
                     }
                     Image("harin")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
-                        .cornerRadius(50)
+                        .cornerRadius(50).padding(.trailing, 25)
                     
                 }.padding(.top, 20)
                 HStack {
@@ -120,7 +120,8 @@ struct Calendar: View {
                 }.padding(.top, 30).padding(.bottom, 100)
                 
                 Spacer()
-            }
+            }.navigationBarTitle("")
+            .navigationBarHidden(true)
         }
     }
 }

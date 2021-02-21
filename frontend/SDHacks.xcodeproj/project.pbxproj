@@ -58,6 +58,7 @@
 		BE0BC9AA25E2549A00B186D9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC9A925E2549A00B186D9 /* Profile.swift */; };
 		BE0BC9B225E2596B00B186D9 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC9B125E2596B00B186D9 /* Calendar.swift */; };
 		BE0BC9B725E25C6800B186D9 /* Blueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC9B625E25C6800B186D9 /* Blueprint.swift */; };
+		BE0BC9BA25E25FBA00B186D9 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC9B925E25FBA00B186D9 /* Camera.swift */; };
 		BEE631CF25E19C06009144B3 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631CE25E19C06009144B3 /* Plant.swift */; };
 		BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */; };
 		BEE631E925E1E6C8009144B3 /* PlantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631E825E1E6C8009144B3 /* PlantType.swift */; };
@@ -118,6 +119,7 @@
 		BE0BC9A925E2549A00B186D9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		BE0BC9B125E2596B00B186D9 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		BE0BC9B625E25C6800B186D9 /* Blueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blueprint.swift; sourceTree = "<group>"; };
+		BE0BC9B925E25FBA00B186D9 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		BEE631CE25E19C06009144B3 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantEndpoints.swift; sourceTree = "<group>"; };
 		BEE631E825E1E6C8009144B3 /* PlantType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantType.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				B800E85325E19CAD00557025 /* PlantCard.swift */,
 				B800E85625E1A32600557025 /* PlantScroll.swift */,
 				B800E85925E1AC3500557025 /* RecentContributors.swift */,
+				BE0BC9B925E25FBA00B186D9 /* Camera.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				B800E87925E1ED8B00557025 /* PlantDescriptionHeader.swift in Sources */,
 				B800E88F25E2249E00557025 /* MenuBar.swift in Sources */,
 				BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */,
+				BE0BC9BA25E25FBA00B186D9 /* Camera.swift in Sources */,
 				B800E82525E0BE6B00557025 /* Onboarding.swift in Sources */,
 				B800E85425E19CAD00557025 /* PlantCard.swift in Sources */,
 				B800E84525E1180E00557025 /* Dashboard.swift in Sources */,
@@ -653,7 +657,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SDHacks/Preview Content\"";
-				DEVELOPMENT_TEAM = 4HBR3Z2SY9;
+				DEVELOPMENT_TEAM = 35ZK849627;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SDHacks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -676,7 +680,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SDHacks/Preview Content\"";
-				DEVELOPMENT_TEAM = 4HBR3Z2SY9;
+				DEVELOPMENT_TEAM = 35ZK849627;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SDHacks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
