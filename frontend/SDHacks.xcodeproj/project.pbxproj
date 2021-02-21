@@ -40,6 +40,7 @@
 		B800E87F25E1F20D00557025 /* PlantCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E87E25E1F20D00557025 /* PlantCare.swift */; };
 		B800E88425E1FDE900557025 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E88325E1FDE900557025 /* Report.swift */; };
 		B800E88825E2044A00557025 /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E88725E2044A00557025 /* Contribution.swift */; };
+		B800E88F25E2249E00557025 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E88E25E2249E00557025 /* MenuBar.swift */; };
 		BE0BC99425E21BAD00B186D9 /* ContributionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC99325E21BAD00B186D9 /* ContributionDate.swift */; };
 		BEE631CF25E19C06009144B3 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631CE25E19C06009144B3 /* Plant.swift */; };
 		BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */; };
@@ -83,6 +84,7 @@
 		B800E87E25E1F20D00557025 /* PlantCare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCare.swift; sourceTree = "<group>"; };
 		B800E88325E1FDE900557025 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		B800E88725E2044A00557025 /* Contribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
+		B800E88E25E2249E00557025 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		BE0BC99325E21BAD00B186D9 /* ContributionDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionDate.swift; sourceTree = "<group>"; };
 		BEE631CE25E19C06009144B3 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantEndpoints.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		B800E7F025E0AAAB00557025 /* SDHacks */ = {
 			isa = PBXGroup;
 			children = (
+				B800E88D25E2248D00557025 /* MenuBar */,
 				B800E88625E2043300557025 /* Contribution */,
 				B800E86425E1C27700557025 /* Plots */,
 				BEE631CD25E19BDE009144B3 /* Plant */,
@@ -249,6 +252,14 @@
 				BE0BC99325E21BAD00B186D9 /* ContributionDate.swift */,
 			);
 			path = Contribution;
+			sourceTree = "<group>";
+		};
+		B800E88D25E2248D00557025 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				B800E88E25E2249E00557025 /* MenuBar.swift */,
+			);
+			path = MenuBar;
 			sourceTree = "<group>";
 		};
 		BEE631CD25E19BDE009144B3 /* Plant */ = {
@@ -405,6 +416,7 @@
 				B800E87F25E1F20D00557025 /* PlantCare.swift in Sources */,
 				B800E84D25E1922600557025 /* DashboardHead.swift in Sources */,
 				B800E87925E1ED8B00557025 /* PlantDescriptionHeader.swift in Sources */,
+				B800E88F25E2249E00557025 /* MenuBar.swift in Sources */,
 				BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */,
 				B800E82525E0BE6B00557025 /* Onboarding.swift in Sources */,
 				B800E85425E19CAD00557025 /* PlantCard.swift in Sources */,
