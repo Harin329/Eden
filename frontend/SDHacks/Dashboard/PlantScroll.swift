@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct PlantScroll: View {
+    private let plants: [PlantType]
+    
+    init() {
+        print(PlantEndpoints.getPlantsInGroup(plotID: 1))
+        self.plants = PlantEndpoints.getPlantsInGroup(plotID: 1)
+    }
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
-                ForEach(0..<10) {_ in
-                        PlantCard()
+                ForEach(self.plants, id: \.self) { plant in
+//                    let pInfo = PlantType(PlantID: 1, GardenID: 1, PlotID: 1, PlantType: "Tomato Plant", PlantName: "Alex", Instruction: "Water")
+                    PlantCard(plantInfo: plant)
                     }
             }.padding(.vertical, 15)
             .padding(.horizontal, 25)

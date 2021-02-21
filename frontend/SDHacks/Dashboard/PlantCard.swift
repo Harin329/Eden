@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct PlantCard: View {
+    var plantInfo: PlantType
+    
+    
     var body: some View {
-        NavigationLink(destination: VStack{}) { // direct Plant Profile
+        NavigationLink(destination: Plant(plantInfo: plantInfo)) {
             VStack {
-                Image("dashboard2")
+                Image(self.plantInfo.PlantType)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 180, height: 180)
@@ -42,12 +45,12 @@ struct PlantCard: View {
                 .padding(.leading, 10)
                 .padding(.trailing, 10)
                 HStack {
-                    Text("Flynn")
+                    Text(String(self.plantInfo.PlantName))
                     Spacer()
                 }.padding(.bottom, 1)
                 .padding(.leading, 10)
                 HStack {
-                    Text("#P12334")
+                    Text("#" + String(self.plantInfo.PlantID))
                         .font(.system(size: 14))
                         .foregroundColor(Color(hex: "757575"))
                     Spacer()
@@ -73,8 +76,8 @@ struct PlantCard: View {
     }
 }
 
-struct PlantCard_Previews: PreviewProvider {
-    static var previews: some View {
-        PlantCard()
-    }
-}
+//struct PlantCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlantCard()
+//    }
+//}

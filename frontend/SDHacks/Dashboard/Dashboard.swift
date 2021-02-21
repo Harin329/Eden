@@ -55,6 +55,7 @@ struct Dashboard: View {
             }
         }.accentColor( Color(hex: "#000"))
     }
+<<<<<<< HEAD
     
 //    func getArticles() {
 //            guard let url = URL(string: "http://www.muse-magazine.com/wp-json/wp/v2/posts") else { return }
@@ -97,8 +98,9 @@ struct Dashboard: View {
 //            }
 //            .resume()
 //        }
+=======
+>>>>>>> 5800609474a9ca8f0d135ea8f45f4b572898eb28
 }
-
 
 
 

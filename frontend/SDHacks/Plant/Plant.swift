@@ -7,7 +7,18 @@
 
 import SwiftUI
 
+struct PlantType: Codable, Hashable {
+    var PlantID: Int
+    var GardenID: Int
+    var PlotID: Int
+    var PlantType: String
+    var PlantName: String
+    var Instruction: String
+}
+
 struct Plant: View {
+    var plantInfo: PlantType
+    
     var body: some View {
         VStack {
             HStack {
@@ -37,15 +48,15 @@ struct Plant: View {
             HStack {
                 VStack {
                     HStack {
-                        Text("#F1256").font(.system(size: 14)).foregroundColor(Color(hex: "#848484"))
+                        Text("#" + String(plantInfo.PlantID)).font(.system(size: 14)).foregroundColor(Color(hex: "#848484"))
                         Spacer()
                     }.padding(.bottom, 1)
                     HStack {
-                        Text("Julie").font(.system(size: 25)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
+                        Text(plantInfo.PlantName).font(.system(size: 25)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
                         Spacer()
                     }.padding(.bottom, 3)
                     HStack {
-                        Text("Snake Plant").font(.system(size: 18)).foregroundColor(Color(hex: "#848484"))
+                        Text(plantInfo.PlantType).font(.system(size: 18)).foregroundColor(Color(hex: "#848484"))
                         Spacer()
                     }
                 }.padding(.leading, 25)
@@ -67,11 +78,11 @@ struct Plant: View {
                 }.padding(.trailing, 25)
             }.padding(.bottom, 10)
             HStack {
-                Image("snakePlant")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 200, height: 200)
-                    .clipped()
+                Image(plantInfo.PlantType)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 200, height: 200)
+                .clipped()
                 Spacer()
                 VStack {
                     HStack {
@@ -139,13 +150,15 @@ struct Plant: View {
             }.padding(.leading, 30)
             Spacer()
             Text("Help it")
-        }.padding(.top, 60)
+        }
+        .padding(.top, 60)
+        .background(Color.white)
         
     }
 }
 
-struct Plant_Previews: PreviewProvider {
-    static var previews: some View {
-        Plant()
-    }
-}
+//struct Plant_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Plant()
+//    }
+//}
