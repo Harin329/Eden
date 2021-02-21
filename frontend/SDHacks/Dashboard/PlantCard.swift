@@ -10,7 +10,6 @@ import SwiftUI
 struct PlantCard: View {
     var plantInfo: PlantType
     
-    
     var body: some View {
         NavigationLink(destination: Plant(plantInfo: plantInfo)) {
             VStack {

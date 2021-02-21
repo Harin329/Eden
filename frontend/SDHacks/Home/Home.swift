@@ -14,9 +14,9 @@ struct Home: View {
         ZStack {
 //            Plant()
             Dashboard()
-            GardenMap(map: $map)
-                .offset(y: map ? 0 : 1000)
-                .offset(y: login ? -1000 : 0)
+//            GardenMap(map: $map)
+//                .offset(y: map ? 0 : 1000)
+//                .offset(y: login ? -1000 : 0)
             Onboarding(login: $login, map: $map)
                 .offset(y: login ? 0 : -1000)
         }.animation(.easeInOut)

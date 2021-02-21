@@ -73,7 +73,7 @@ struct Plots: View {
                     Spacer()
                 }.padding(.horizontal, 25)
             }.padding(.bottom, 70)
-            .padding(.top, 60)
+            .padding(.top, 35)
         }.navigationBarTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
