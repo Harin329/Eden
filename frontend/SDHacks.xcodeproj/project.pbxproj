@@ -39,6 +39,7 @@
 		B800E87C25E1F07600557025 /* PlantAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E87B25E1F07600557025 /* PlantAbout.swift */; };
 		B800E87F25E1F20D00557025 /* PlantCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E87E25E1F20D00557025 /* PlantCare.swift */; };
 		B800E88425E1FDE900557025 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E88325E1FDE900557025 /* Report.swift */; };
+		B800E88825E2044A00557025 /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E88725E2044A00557025 /* Contribution.swift */; };
 		BEE631CF25E19C06009144B3 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631CE25E19C06009144B3 /* Plant.swift */; };
 		BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */; };
 		BEE631E925E1E6C8009144B3 /* PlantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631E825E1E6C8009144B3 /* PlantType.swift */; };
@@ -79,6 +80,7 @@
 		B800E87B25E1F07600557025 /* PlantAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAbout.swift; sourceTree = "<group>"; };
 		B800E87E25E1F20D00557025 /* PlantCare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCare.swift; sourceTree = "<group>"; };
 		B800E88325E1FDE900557025 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		B800E88725E2044A00557025 /* Contribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
 		BEE631CE25E19C06009144B3 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantEndpoints.swift; sourceTree = "<group>"; };
 		BEE631E825E1E6C8009144B3 /* PlantType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantType.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		B800E7F025E0AAAB00557025 /* SDHacks */ = {
 			isa = PBXGroup;
 			children = (
+				B800E88625E2043300557025 /* Contribution */,
 				B800E86425E1C27700557025 /* Plots */,
 				BEE631CD25E19BDE009144B3 /* Plant */,
 				B800E84325E117E100557025 /* Dashboard */,
@@ -232,6 +235,14 @@
 				B800E86825E1C33500557025 /* PlotCard.swift */,
 			);
 			path = Plots;
+			sourceTree = "<group>";
+		};
+		B800E88625E2043300557025 /* Contribution */ = {
+			isa = PBXGroup;
+			children = (
+				B800E88725E2044A00557025 /* Contribution.swift */,
+			);
+			path = Contribution;
 			sourceTree = "<group>";
 		};
 		BEE631CD25E19BDE009144B3 /* Plant */ = {
@@ -382,6 +393,7 @@
 				B800E82925E0C01D00557025 /* Signup.swift in Sources */,
 				BEE631E925E1E6C8009144B3 /* PlantType.swift in Sources */,
 				B800E84925E191B500557025 /* DropDown.swift in Sources */,
+				B800E88825E2044A00557025 /* Contribution.swift in Sources */,
 				B800E86925E1C33500557025 /* PlotCard.swift in Sources */,
 				B800E87F25E1F20D00557025 /* PlantCare.swift in Sources */,
 				B800E84D25E1922600557025 /* DashboardHead.swift in Sources */,

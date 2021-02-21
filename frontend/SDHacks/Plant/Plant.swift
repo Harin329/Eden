@@ -33,21 +33,31 @@ struct Plant: View {
                             reportMsg = true
                         }) {
                             Image("Report")
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20, height: 20)
                                 .padding(.trailing, 25)
                         }
                     }.padding(.bottom, 10)
                     HStack {
                         Image("Water")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
                             .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
                             .padding(.leading, 25)
                         Image("Fertilize")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
                             .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
                             .padding(.leading, 10)
                         Image("Trim")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
                             .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
                             .padding(.leading, 10)
                         Image("Harvest")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
                             .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
                             .padding(.leading, 10)
                         Spacer()
@@ -94,8 +104,10 @@ struct Plant: View {
                         Spacer()
                         VStack {
                             HStack {
-                                Image("Harvest")
-                                    .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
+                                Image("Days")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 45, height: 45)
                                     .padding(.leading, 10)
                                 VStack {
                                     HStack {
@@ -110,8 +122,10 @@ struct Plant: View {
                                 .padding(.trailing, 25)
                             }.padding(.bottom)
                             HStack {
-                                Image("Harvest")
-                                    .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
+                                Image("Height")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 45, height: 45)
                                     .padding(.leading, 10)
                                 VStack {
                                     HStack {
@@ -126,8 +140,10 @@ struct Plant: View {
                                 .padding(.trailing, 25)
                             }.padding(.bottom)
                             HStack {
-                                Image("Harvest")
-                                    .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
+                                Image("WaterLevel")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 45, height: 45)
                                     .padding(.leading, 10)
                                 VStack {
                                     HStack {
