@@ -21,6 +21,7 @@ struct GardenMap: View {
                 VStack {
                     HStack {
                         Text("Select your garden(s):")
+                            .font(.custom("Poppins-Regular", size: 20))
                         Spacer()
                     }.padding(.top, 70)
                     .padding(.leading, 40)

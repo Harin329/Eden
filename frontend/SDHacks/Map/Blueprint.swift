@@ -40,16 +40,18 @@ struct Blueprint: View {
                     }
                 }.padding(.leading, 25)
                 
-            }.padding(.top, 20)
+            }.padding(.top, 5)
             HStack {
                 Image("Blueprint")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 329, height: 500)
                     .edgesIgnoringSafeArea(.all)
-            }.padding(.top, 50)
+            }.padding(.top, 20)
             Spacer()
-        }
+        }.navigationBarTitle("")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 
