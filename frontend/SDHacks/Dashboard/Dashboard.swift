@@ -21,19 +21,19 @@ struct Dashboard: View {
                         HStack {
                             Button(action:{}) {
                                 Text("Plants")
-                                    .font(.system(size: 26))
-                                    .foregroundColor(.black)
+                                    .font(.custom("Poppins-Medium", size: 20))
+                                    .foregroundColor(Color(hex: "3a3a3a"))
                             }.padding(.trailing, 20)
                             Button(action:{}) {
                                 Text("Saved")
-                                    .font(.system(size: 26))
-                                    .foregroundColor(.gray)
+                                    .font(.custom("Poppins-Medium", size: 20))
+                                    .foregroundColor(Color(hex: "c9c9c9"))
                             }
                             Spacer()
                             NavigationLink(destination: Plots()) { 
                                 Text("See all")
-                                    .font(.system(size: 18))
-                                    .foregroundColor(.black)
+                                    .font(.custom("Poppins-Medium", size: 13))
+                                    .foregroundColor(Color(hex: "383F56"))
                             }
                         }
                         .padding(.top, 25)

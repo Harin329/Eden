@@ -23,22 +23,22 @@ struct Report: View {
             }
             Text("Report a problem")
                 .foregroundColor(Color(hex: "3a3a3a"))
-                .font(.system(size: 28))
+                .font(.custom("Poppins-Medium", size: 20))
                 .padding(.top, 30)
             Image("reportBig")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)
             Text("If you think you have found a plant pest or any other potential threats and damages, send a report to the admin.  We appreciate it!")
-                .font(.system(size: 16))
+                .font(.custom("Poppins-Regular", size: 12))
+                .foregroundColor(Color(hex: "3a3a3a"))
                 .multilineTextAlignment(.center)
             Button(action: {
                 report = false
             }) {
                 Text("Report")
-                    .font(.system(size: 14))
+                    .font(.custom("Poppins-Medium", size: 13))
                     .foregroundColor(Color.white)
-                    .fontWeight(.medium)
                     .padding(.vertical, 12)
                     .frame(width: 190)
             }

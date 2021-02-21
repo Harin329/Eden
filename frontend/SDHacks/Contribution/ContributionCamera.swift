@@ -78,20 +78,28 @@ struct ContributionCamera: View {
                 Spacer()
             }.padding(.bottom, 10)
             HStack {
-                Text("Splendid!").fontWeight(.medium).padding(.leading, 25).padding(.top, 10).foregroundColor(Color(hex: "#C4C4C4"))
+                Text("Splendid!")
+                    .font(.custom("Poppins-Medium", size: 15))
+                    .foregroundColor(Color(hex: "c4c4c4"))
+                    .padding(.leading, 25)
+                    .padding(.top, 10)
                 Spacer()
             }
             HStack {
-                Text("Snap a picture of your contribution!").font(.system(size: 24)).padding(.leading, 25).padding(.top, 5).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
+                Text("Snap a picture of your contribution!")
+                    .font(.custom("Poppins-Medium", size: 20))
+                    .foregroundColor(Color(hex: "3a3a3a"))
+                    .padding(.leading, 25)
+                    .padding(.top, 5)
+                    .frame(minWidth: 0, maxWidth: 300, alignment: .leading)
                 Spacer()
             }
             VStack {
                 ImagePicker(selectedImage: self.$image, sourceType: .camera).frame(height: 400)
                 NavigationLink(destination: ContributionConfirmation(plantInfo: plantInfo, contributeType: contributeType, contributeDate: contributeDate, contributionImage: image)) {
                 Text("Capture")
-                    .font(.system(size: 14))
-                    .foregroundColor(Color.white)
-                    .fontWeight(.medium)
+                    .font(.custom("Poppins-Medium", size: 13))
+                    .foregroundColor(Color(hex: "fff"))
                     .padding(.vertical, 12)
                     .frame(width: 50, height: 50)
                     .cornerRadius(50)
@@ -105,9 +113,8 @@ struct ContributionCamera: View {
                 self.isShowPhotoLibrary = true
             }) {
                 Text("Camera Roll")
-                    .font(.system(size: 14))
-                    .foregroundColor(Color.white)
-                    .fontWeight(.medium)
+                    .font(.custom("Poppins-Medium", size: 13))
+                    .foregroundColor(Color(hex: "fff"))
                     .padding(.vertical, 12)
                     .frame(width: 150)
             }
@@ -118,9 +125,8 @@ struct ContributionCamera: View {
             NavigationLink(destination: ContributionConfirmation(plantInfo: plantInfo, contributeType: contributeType, contributeDate: contributeDate, contributionImage: image)) {
                 
                 Text("Next")
-                    .font(.system(size: 14))
-                    .foregroundColor(Color.white)
-                    .fontWeight(.medium)
+                    .font(.custom("Poppins-Medium", size: 13))
+                    .foregroundColor(Color(hex: "fff"))
                     .padding(.vertical, 12)
                     .frame(width: 150)
             }

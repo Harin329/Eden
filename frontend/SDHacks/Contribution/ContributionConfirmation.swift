@@ -34,11 +34,20 @@ struct ContributionConfirmation: View {
                 Spacer()
             }.padding(.bottom, 10)
             HStack {
-                Text("Harin").fontWeight(.medium).padding(.leading, 25).padding(.top, 10).foregroundColor(Color(hex: "#C4C4C4"))
+                Text("Harin")
+                    .font(.custom("Poppins-Medium", size: 15))
+                    .foregroundColor(Color(hex: "c4c4c4"))
+                    .padding(.leading, 25)
+                    .padding(.top, 10)
                 Spacer()
             }
             HStack {
-                Text("You contributed by:").font(.system(size: 24)).padding(.leading, 25).padding(.top, 5).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
+                Text("You contributed by:")
+                    .font(.custom("Poppins-Medium", size: 20))
+                    .foregroundColor(Color(hex: "3a3a3a"))
+                    .padding(.leading, 25)
+                    .padding(.top, 5)
+                    .frame(minWidth: 0, maxWidth: 300, alignment: .leading)
                 Spacer()
             }
             VStack {
@@ -49,24 +58,37 @@ struct ContributionConfirmation: View {
                                .edgesIgnoringSafeArea(.all)
             }
             HStack {
-                Text(contributeType + " at Allen School").font(.system(size: 24)).padding(.leading, 25).padding(.top, 5).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
+                Text(contributeType + " at Allen School")
+                    .font(.custom("Poppins-Medium", size: 20))
+                    .foregroundColor(Color(hex: "3a3a3a"))
+                    .padding(.leading, 25)
+                    .padding(.top, 5)
+                    .frame(minWidth: 0, maxWidth: 300, alignment: .leading)
                 Spacer()
             }
             HStack {
-                Text("on").font(.system(size: 12)).padding(.leading, 25).padding(.top, 5).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
+                Text("on")
+                    .font(.custom("Poppins-Medium", size: 13))
+                    .foregroundColor(Color(hex: "aaaaaa"))
+                    .padding(.leading, 25)
+                    .padding(.top, 5)
+                    .frame(minWidth: 0, maxWidth: 300, alignment: .leading)
                 Spacer()
             }
             HStack {
-                Text("Feb 21, 2021").font(.system(size: 24)).padding(.leading, 25).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
+                Text("Feb 21, 2021")
+                    .font(.custom("Poppins-Medium", size: 20))
+                    .foregroundColor(Color(hex: "3a3a3a"))
+                    .padding(.leading, 25)
+                    .frame(minWidth: 0, maxWidth: 300, alignment: .leading)
                 Spacer()
             }
             HStack {
                 Spacer()
                 NavigationLink(destination: Thanks(plantInfo: plantInfo, contributeType: contributeType, contributeDate: contributeDate, contributionImage: image)) {
                     Text("Confirm")
-                        .font(.system(size: 14))
-                        .foregroundColor(Color.white)
-                        .fontWeight(.medium)
+                        .font(.custom("Poppins-Medium", size: 13))
+                        .foregroundColor(Color(hex: "ffffff"))
                         .padding(.vertical, 12)
                         .frame(width: 100)
                 }

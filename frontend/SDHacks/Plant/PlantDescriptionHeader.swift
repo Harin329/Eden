@@ -16,21 +16,21 @@ struct PlantDescriptionHeader: View {
                 selected = "About"
             }) {
                 Text("About")
-                    .font(.system(size: 18))
+                    .font(.custom("Poppins-Medium", size: 14))
                     .foregroundColor(Color(hex: selected == "About" ? "3a3a3a" : "c9c9c9"))
             }.padding(.trailing, 15)
             Button(action: {
                 selected = "Care"
             }) {
                 Text("Care")
-                    .font(.system(size: 18))
+                    .font(.custom("Poppins-Medium", size: 14))
                     .foregroundColor(Color(hex: selected == "Care" ? "3a3a3a" : "c9c9c9"))
             }.padding(.trailing, 15)
             Button(action: {
                 selected = "Images"
             }) {
                 Text("Images")
-                    .font(.system(size: 18))
+                    .font(.custom("Poppins-Medium", size: 14))
                     .foregroundColor(Color(hex: selected == "Images" ? "3a3a3a" : "c9c9c9"))
             }
             Spacer()

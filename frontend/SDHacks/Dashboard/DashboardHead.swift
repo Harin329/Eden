@@ -15,7 +15,8 @@ struct DashboardHead: View {
             VStack {
                 HStack {
                     Text("Welcome to:")
-                        .font(.system(size: 20))
+                        .font(.custom("Poppins-Regular", size: 15))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                     Spacer()
                 }
                 HStack {

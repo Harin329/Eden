@@ -23,13 +23,12 @@ struct DropDown: View {
             VStack(spacing: 10) {
                 HStack() {
                     Text(self.gardens[0].Name)
-                        .fontWeight(.bold)
-                        .font(.system(size: 26))
-                        .foregroundColor(Color(hex: "73C597"))
+                        .font(.custom("Poppins-Medium", size: 20))
+                        .foregroundColor(Color(hex: "68C883"))
                     Image(systemName: expand ? "chevron.up" : "chevron.down")
                         .resizable()
                         .frame(width: 13, height: 6)
-                        .foregroundColor(Color(hex: "73C597"))
+                        .foregroundColor(Color(hex: "68C883"))
                     Spacer()
                 }.onTapGesture {
                     self.expand.toggle()
@@ -41,7 +40,8 @@ struct DropDown: View {
                                 self.expand.toggle()
                             }) {
                                 Text(garden.Name)
-                                    .font(.system(size: 22))
+                                    .font(.custom("Poppins-Medium", size: 13))
+                                    .foregroundColor(Color(hex: "3a3a3a"))
                                     .padding(.vertical, 10)
                             }.foregroundColor(Color(hex: "3A3A3A"))
                             Divider().padding(.horizontal, 20)
@@ -50,7 +50,7 @@ struct DropDown: View {
                             self.expand.toggle()
                         }) {
                             Image(systemName: "plus")
-                                .font(.system(size: 22))
+                                .font(.system(size: 15))
                                 .padding(.vertical, 10)
                                 .padding(.bottom, 10)
                         }.foregroundColor(Color(hex: "3A3A3A"))

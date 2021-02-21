@@ -35,6 +35,8 @@ struct GardenList: View {
             }
             HStack {
                 Text("Selected gardens:")
+                    .font(.custom("Poppins-Medium", size: 15))
+                    .foregroundColor(Color(hex: "3a3a3a"))
                 Spacer()
             }
             .frame(width: 290)
@@ -50,6 +52,7 @@ struct GardenList: View {
                 }) {
                     HStack {
                         Text("Done")
+                            .font(.custom("Poppins-Medium", size: 14))
                             .foregroundColor(Color(hex: "#fff"))
                             .padding([.vertical],10)
                             .frame(width:130)
@@ -79,15 +82,16 @@ struct GardenListCard: View {
             VStack {
                 HStack {
                     Text(garden.name)
-                        .font(.system(size: 14))
-                        .bold()
+                        .font(.custom("Poppins-SemiBold", size: 13))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                         .fixedSize(horizontal: false, vertical: true)
 
                     Spacer()
                 }.padding(.bottom, 1)
                 HStack {
                     Text(garden.address)
-                        .font(.caption)
+                        .font(.custom("Poppins-Regular", size: 9))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                 }

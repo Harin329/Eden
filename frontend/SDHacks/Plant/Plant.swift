@@ -43,37 +43,43 @@ struct Plant: View {
                         Image("Water")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
+                            .frame(width: 30, height: 30)
                             .padding(.leading, 25)
                         Image("Fertilize")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
+                            .frame(width: 30, height: 30)
                             .padding(.leading, 10)
                         Image("Trim")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
+                            .frame(width: 30, height: 30)
                             .padding(.leading, 10)
                         Image("Harvest")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(minWidth: 0, maxWidth: 30, alignment: .leading)
+                            .frame(width: 30, height: 30)
                             .padding(.leading, 10)
                         Spacer()
                     }.padding(.bottom, 10)
                     HStack {
                         VStack {
                             HStack {
-                                Text("#" + String(plantInfo.PlantID)).font(.system(size: 14)).foregroundColor(Color(hex: "#848484"))
+                                Text("#" + String(plantInfo.PlantID))
+                                    .font(.custom("Poppins-Regular", size: 9))
+                                    .foregroundColor(Color(hex: "848484"))
                                 Spacer()
                             }.padding(.bottom, 1)
                             HStack {
-                                Text(plantInfo.PlantName).font(.system(size: 25)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
+                                Text(plantInfo.PlantName)
+                                    .font(.custom("Poppins-Medium", size: 20))
+                                    .foregroundColor(Color(hex: "3a3a3a"))
                                 Spacer()
                             }.padding(.bottom, 3)
                             HStack {
-                                Text(plantInfo.PlantType).font(.system(size: 18)).foregroundColor(Color(hex: "#848484"))
+                                Text(plantInfo.PlantType)
+                                    .font(.custom("Poppins-Regular", size: 13))
+                                    .foregroundColor(Color(hex: "848484"))
                                 Spacer()
                             }
                         }.padding(.leading, 25)
@@ -82,9 +88,8 @@ struct Plant: View {
                             HStack {
                                 Button(action: {}) {
                                     Text("64 contributors")
-                                        .font(.system(size: 16))
-                                        .foregroundColor(Color(hex: "#848484"))
-                                        .fontWeight(.medium)
+                                        .font(.custom("Poppins-Medium", size: 10))
+                                        .foregroundColor(Color(hex: "848484"))
                                         .padding(.all, 5)
                                         .padding(.horizontal, 5)
                                 }.background(RoundedRectangle(cornerRadius: 10)
@@ -111,11 +116,15 @@ struct Plant: View {
                                     .padding(.leading, 10)
                                 VStack {
                                     HStack {
-                                        Text("30").font(.system(size: 14)).foregroundColor(Color(hex: "#68C883")).fontWeight(.medium)
+                                        Text("30")
+                                            .font(.custom("Poppins-Medium", size: 12))
+                                            .foregroundColor(Color(hex: "68C883"))
                                         Spacer()
                                     }
                                     HStack{
-                                        Text("Days").font(.system(size: 14)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
+                                        Text("Days")
+                                            .font(.custom("Poppins-Regular", size: 14))
+                                            .foregroundColor(Color(hex: "3a3a3a"))
                                         Spacer()
                                     }
                                 }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
@@ -129,11 +138,15 @@ struct Plant: View {
                                     .padding(.leading, 10)
                                 VStack {
                                     HStack {
-                                        Text("12 cm").font(.system(size: 14)).foregroundColor(Color(hex: "#68C883")).fontWeight(.medium)
+                                        Text("12 cm")
+                                            .font(.custom("Poppins-Medium", size: 12))
+                                            .foregroundColor(Color(hex: "68C883"))
                                         Spacer()
                                     }
                                     HStack{
-                                        Text("Height").font(.system(size: 14)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
+                                        Text("Height")
+                                            .font(.custom("Poppins-Regular", size: 14))
+                                            .foregroundColor(Color(hex: "3a3a3a"))
                                         Spacer()
                                     }
                                 }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
@@ -147,11 +160,15 @@ struct Plant: View {
                                     .padding(.leading, 10)
                                 VStack {
                                     HStack {
-                                        Text("Medium").font(.system(size: 14)).foregroundColor(Color(hex: "#68C883")).fontWeight(.medium)
+                                        Text("Medium")
+                                            .font(.custom("Poppins-Medium", size: 12))
+                                            .foregroundColor(Color(hex: "68C883"))
                                         Spacer()
                                     }
                                     HStack{
-                                        Text("Water").font(.system(size: 14)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
+                                        Text("Water")
+                                            .font(.custom("Poppins-Regular", size: 14))
+                                            .foregroundColor(Color(hex: "3a3a3a"))
                                         Spacer()
                                     }
                                 }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
@@ -162,10 +179,9 @@ struct Plant: View {
                     HStack {
                         NavigationLink(destination: Contribution(plantInfo: plantInfo)) {
                             Text("Help me grow")
-                                .font(.system(size: 14))
-                                .foregroundColor(Color.white)
-                                .fontWeight(.medium)
-                                .padding(.vertical, 7)
+                                .font(.custom("Poppins-Medium", size: 13))
+                                .foregroundColor(Color(hex: "fff"))
+                                .padding(.vertical, 10)
                                 .frame(width: 190)
                         }
                         .background(Color(hex: "#3A3A3A"))

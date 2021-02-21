@@ -66,14 +66,15 @@ struct GardenMap: View {
                             }
                             HStack {
                                 Text(selectedGarden!.name)
-                                    .bold()
-                                    .font(.system(size: 14))
+                                    .font(.custom("Poppins-SemiBold", size: 13))
+                                    .foregroundColor(Color(hex: "3a3a3a"))
                                     .padding(.bottom, 1)
                                 Spacer()
                             }
                             HStack {
                                 Text(selectedGarden!.address)
-                                    .font(.caption)
+                                    .font(.custom("Poppins-Regular", size: 11))
+                                    .foregroundColor(Color(hex: "3a3a3a"))
                                     .fixedSize(horizontal: false, vertical: true)
                                     .padding(.trailing, 10)
                                 Spacer()
@@ -87,7 +88,7 @@ struct GardenMap: View {
                                     }) {
                                         HStack {
                                             Text("Add")
-                                                .font(.caption2)
+                                                .font(.custom("Poppins-SemiBold", size: 12))
                                                 .foregroundColor(Color(hex: "#fff"))
                                                 .padding([.vertical],10)
                                                 .frame(width:100)

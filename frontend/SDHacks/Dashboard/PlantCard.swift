@@ -50,21 +50,23 @@ struct PlantCard: View {
                 .padding(.trailing, 10)
                 HStack {
                     Text(String(self.plantInfo.PlantName))
+                        .font(.custom("Poppins-Medium", size: 13))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                     Spacer()
                 }.padding(.bottom, 1)
                 .padding(.leading, 10)
                 HStack {
-                    Text(String(self.plantInfo.PlantType) + " #" + String(self.plantInfo.PlantID))
-                        .font(.system(size: 14))
-                        .foregroundColor(Color(hex: "757575"))
+                    Text(String(self.plantInfo.PlantType) + " • #" + String(self.plantInfo.PlantID))
+                        .font(.custom("Poppins-Regular", size: 10))
+                        .foregroundColor(Color(hex: "848484"))
                     Spacer()
                 }.padding(.bottom, 1)
                 .padding(.leading, 10)
                 
                 HStack {
                     Text("Last updated: 02/20/2021")
-                        .font(.system(size: 12))
-                        .foregroundColor(Color(hex: "757575"))
+                        .font(.custom("Poppins-Regular", size: 10))
+                        .foregroundColor(Color(hex: "848484"))
                     Spacer()
                 }.padding(.leading, 10)
                 .padding(.bottom, 15)

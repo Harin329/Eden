@@ -12,7 +12,8 @@ struct RecentContributors: View {
         VStack {
             HStack {
                 Text("Recent Contributors")
-                    .font(.system(size: 26))
+                    .font(.custom("Poppins-Medium", size: 20))
+                    .foregroundColor(Color(hex: "3a3a3a"))
                 Spacer()
             }.padding(.bottom, 20)
             HStack {
@@ -23,6 +24,8 @@ struct RecentContributors: View {
                         .frame(width: 85, height: 85)
                         .cornerRadius(85)
                     Text("Harin W")
+                        .font(.custom("Poppins-Medium", size: 13))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                 }
                 Spacer()
                 VStack {
@@ -31,6 +34,8 @@ struct RecentContributors: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 85, height: 85)
                     Text("Jenny C")
+                        .font(.custom("Poppins-Medium", size: 13))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                 }
                 Spacer()
                 VStack {
@@ -39,6 +44,8 @@ struct RecentContributors: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 85, height: 85)
                     Text("Sophia C")
+                        .font(.custom("Poppins-Medium", size: 13))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                 }
             }
             HStack {
@@ -48,6 +55,8 @@ struct RecentContributors: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 85, height: 85)
                     Text("Victor U")
+                        .font(.custom("Poppins-Medium", size: 13))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                 }
                 Spacer()
                 VStack {
@@ -56,6 +65,8 @@ struct RecentContributors: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 85, height: 85)
                     Text("Mikayla L")
+                        .font(.custom("Poppins-Medium", size: 13))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                 }
                 Spacer()
                 VStack {
@@ -65,6 +76,8 @@ struct RecentContributors: View {
                         .frame(width: 85, height: 85)
                         .cornerRadius(85)
                     Text("Pierce H")
+                        .font(.custom("Poppins-Medium", size: 13))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                 }
             }.padding(.bottom, 100)
         }.frame(width: UIScreen.main.bounds.width - 50)

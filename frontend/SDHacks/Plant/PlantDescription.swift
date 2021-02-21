@@ -22,14 +22,14 @@ struct PlantDescription: View {
                 Image("Gallery")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: UIScreen.main.bounds.width - 50)
+                    .frame(width: UIScreen.main.bounds.width - 50, height: .infinity)
                     .padding(.top, 30)
             }
             Spacer()
         }
         .frame(minHeight: 300)
         .padding(.top, 20)
-        .padding(.bottom, selected == "Images" ? 0 : 30)
+        .padding(.bottom, 30)
         .background(Rectangle()
                         .fill(Color.white)
                         .cornerRadius(10)

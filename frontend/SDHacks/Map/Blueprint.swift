@@ -27,14 +27,14 @@ struct Blueprint: View {
             HStack {
                 VStack {
                     HStack {
-                    Text("Map View").font(.system(size: 20)).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
+                    Text("Map View").font(.custom("Poppins-Medium", size: 20))
+                        .foregroundColor(Color(hex: "3a3a3a")).frame(minWidth: 0, maxWidth: 300, alignment: .leading)
                         Spacer()
                     }
                     HStack {
                     Text("Allen School")
-                        .font(.system(size: 16))
+                        .font(.custom("Poppins-Medium", size: 15))
                         .foregroundColor(Color(hex: "#848484"))
-                        .fontWeight(.medium)
                         .frame(maxWidth: 300, alignment: .leading)
                         Spacer()
                     }

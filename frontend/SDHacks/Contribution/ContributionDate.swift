@@ -26,11 +26,20 @@ struct ContributionDate: View {
                 Spacer()
             }.padding(.bottom, 10)
             HStack {
-                Text("Amazing!").fontWeight(.medium).padding(.leading, 25).padding(.top, 20).foregroundColor(Color(hex: "#C4C4C4"))
+                Text("Amazing!")
+                    .font(.custom("Poppins-Medium", size: 15))
+                    .foregroundColor(Color(hex: "c4c4c4"))
+                    .padding(.leading, 25)
+                    .padding(.top, 20)
                 Spacer()
             }
             HStack {
-                Text("How would you like to contribute today?").font(.system(size: 24)).padding(.leading, 25).padding(.top, 5).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: 300, alignment: .leading)
+                Text("How would you like to contribute today?")
+                    .font(.custom("Poppins-Medium", size: 20))
+                    .foregroundColor(Color(hex: "3a3a3a"))
+                    .padding(.leading, 25)
+                    .padding(.top, 5)
+                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: 300, alignment: .leading)
                 Spacer()
             }
             VStack {
@@ -40,9 +49,8 @@ struct ContributionDate: View {
                 Spacer()
                 NavigationLink(destination: ContributionCamera(plantInfo: plantInfo, contributeType: contributeType, contributeDate: date)) {
                     Text("Next")
-                        .font(.system(size: 14))
-                        .foregroundColor(Color.white)
-                        .fontWeight(.medium)
+                        .font(.custom("Poppins-Medium", size: 13))
+                        .foregroundColor(Color(hex: "fff"))
                         .padding(.vertical, 12)
                         .frame(width: 100)
                 }

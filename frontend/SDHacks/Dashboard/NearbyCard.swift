@@ -19,14 +19,15 @@ struct NearbyCard: View {
             VStack {
                 HStack {
                     Text("Nearby: Hilltop Drive")
-                        .font(.system(size: 16))
+                        .font(.custom("Poppins-Medium", size: 13))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                     Spacer()
                 }
                 VStack {
                     HStack {
                         HStack {
                             Text("1km away")
-                                .font(.caption2)
+                                .font(.custom("Poppins-Medium", size: 8))
                                 .foregroundColor(Color(hex: "#fff"))
                                 .padding([.vertical],5)
                                 .frame(width:80)
@@ -35,7 +36,7 @@ struct NearbyCard: View {
                         .cornerRadius(8)
                         HStack {
                             Text("8 Plots")
-                                .font(.caption2)
+                                .font(.custom("Poppins-Medium", size: 8))
                                 .foregroundColor(Color(hex: "#fff"))
                                 .padding([.vertical],5)
                                 .frame(width:70)
@@ -47,7 +48,7 @@ struct NearbyCard: View {
                     HStack {
                         HStack {
                             Text("30 Contributors")
-                                .font(.caption2)
+                                .font(.custom("Poppins-Medium", size: 8))
                                 .foregroundColor(Color(hex: "#fff"))
                                 .padding([.vertical],5)
                                 .frame(width:110)
