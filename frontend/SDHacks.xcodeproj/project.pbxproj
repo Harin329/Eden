@@ -41,6 +41,7 @@
 		B800E88425E1FDE900557025 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E88325E1FDE900557025 /* Report.swift */; };
 		B800E88825E2044A00557025 /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E88725E2044A00557025 /* Contribution.swift */; };
 		BE0BC99425E21BAD00B186D9 /* ContributionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC99325E21BAD00B186D9 /* ContributionDate.swift */; };
+		BE0BC99725E224BF00B186D9 /* ContributionCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC99625E224BF00B186D9 /* ContributionCamera.swift */; };
 		BEE631CF25E19C06009144B3 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631CE25E19C06009144B3 /* Plant.swift */; };
 		BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */; };
 		BEE631E925E1E6C8009144B3 /* PlantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631E825E1E6C8009144B3 /* PlantType.swift */; };
@@ -84,6 +85,7 @@
 		B800E88325E1FDE900557025 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		B800E88725E2044A00557025 /* Contribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
 		BE0BC99325E21BAD00B186D9 /* ContributionDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionDate.swift; sourceTree = "<group>"; };
+		BE0BC99625E224BF00B186D9 /* ContributionCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionCamera.swift; sourceTree = "<group>"; };
 		BEE631CE25E19C06009144B3 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantEndpoints.swift; sourceTree = "<group>"; };
 		BEE631E825E1E6C8009144B3 /* PlantType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantType.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				B800E88725E2044A00557025 /* Contribution.swift */,
 				BE0BC99325E21BAD00B186D9 /* ContributionDate.swift */,
+				BE0BC99625E224BF00B186D9 /* ContributionCamera.swift */,
 			);
 			path = Contribution;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				B800E85425E19CAD00557025 /* PlantCard.swift in Sources */,
 				B800E84525E1180E00557025 /* Dashboard.swift in Sources */,
 				B800E80A25E0ACED00557025 /* Home.swift in Sources */,
+				BE0BC99725E224BF00B186D9 /* ContributionCamera.swift in Sources */,
 				B800E84125E1089D00557025 /* GardenList.swift in Sources */,
 				B800E85725E1A32600557025 /* PlantScroll.swift in Sources */,
 				B800E81425E0AE0900557025 /* RoundedCorners.swift in Sources */,
