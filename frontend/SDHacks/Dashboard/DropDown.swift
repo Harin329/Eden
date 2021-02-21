@@ -11,11 +11,18 @@ struct DropDown: View {
     
     @State var expand = false
     
+    private let gardens: [GardenType]
+    
+    init() {
+        print(PlantEndpoints.getAllGardens())
+        self.gardens = PlantEndpoints.getAllGardens()
+    }
+    
     var body: some View {
         VStack() {
             VStack(spacing: 10) {
                 HStack() {
-                    Text("Golden Hill")
+                    Text(self.gardens[0].Name)
                         .fontWeight(.bold)
                         .font(.system(size: 26))
                         .foregroundColor(Color(hex: "73C597"))
@@ -29,30 +36,16 @@ struct DropDown: View {
                 }
                 if expand {
                     VStack {
-                        Button(action: {
-                            self.expand.toggle()
-                        }) {
-                            Text("Garden 1")
-                                .font(.system(size: 22))
-                                .padding(.vertical, 10)
-                        }.foregroundColor(Color(hex: "3A3A3A"))
-                        Divider().padding(.horizontal, 20)
-                        Button(action: {
-                            self.expand.toggle()
-                        }) {
-                            Text("Garden 2")
-                                .font(.system(size: 22))
-                                .padding(.vertical, 10)
-                        }.foregroundColor(Color(hex: "3A3A3A"))
-                        Divider().padding(.horizontal, 20)
-                        Button(action: {
-                            self.expand.toggle()
-                        }) {
-                            Text("Garden 3")
-                                .font(.system(size: 22))
-                                .padding(.vertical, 10)
-                        }.foregroundColor(Color(hex: "3A3A3A"))
-                        Divider().padding(.horizontal, 20)
+                        ForEach(self.gardens, id: \.self) { garden in
+                            Button(action: {
+                                self.expand.toggle()
+                            }) {
+                                Text(garden.Name)
+                                    .font(.system(size: 22))
+                                    .padding(.vertical, 10)
+                            }.foregroundColor(Color(hex: "3A3A3A"))
+                            Divider().padding(.horizontal, 20)
+                            }
                         Button(action: {
                             self.expand.toggle()
                         }) {

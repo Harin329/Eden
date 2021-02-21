@@ -18,7 +18,7 @@ struct NearbyCard: View {
                 .padding(.leading, 10)
             VStack {
                 HStack {
-                    Text("Nearby: Allen Garden")
+                    Text("Nearby: Hilltop Drive")
                         .font(.system(size: 16))
                     Spacer()
                 }
