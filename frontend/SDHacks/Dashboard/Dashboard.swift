@@ -55,51 +55,6 @@ struct Dashboard: View {
             }
         }.accentColor( Color(hex: "#000"))
     }
-<<<<<<< HEAD
-    
-//    func getArticles() {
-//            guard let url = URL(string: "http://www.muse-magazine.com/wp-json/wp/v2/posts") else { return }
-//
-//            URLSession.shared.dataTask(with: url) { (data, response, error) in
-//                if let data = data {
-//                    if let response = try? JSONSerialization.jsonObject(with: data, options: []) {
-//                        DispatchQueue.main.async {
-//                            var index = 0
-//                            for i in response as! Array<Dictionary<String, Any>>{
-//                                // Get rid of HTML
-//                                var cleaned_body = ((i["content"] as! Dictionary<String, Any>)["rendered"] as! String).replacingOccurrences(of: "\\s?\\<[^>]*\\>", with: "", options: .regularExpression)
-//                                
-//                                // Get rid of stuff at the end
-//                                if let index = cleaned_body.range(of: "&nbsp")?.lowerBound {
-//                                    cleaned_body = String(cleaned_body[..<index])
-//                                }
-//                                // Get rid of stuff at the end
-//                                if let index = cleaned_body.range(of: "HEADER IMAGE")?.lowerBound {
-//                                    cleaned_body = String(cleaned_body[..<index])
-//                                }
-//
-//                                self.stories.append(
-//                                    Story(
-//                                        id: index,
-//                                        image: i["jetpack_featured_media_url"] as! String,
-//                                        offset: 0,
-//                                        title: (i["title"] as! Dictionary<String, String>)["rendered"]!,
-//                                        author: String(i["author"] as! Int),
-//                                        body: cleaned_body
-//                                    )
-//                                )
-//                                index += 1
-//                            }
-//                        }
-//                        self.loadedData = true
-//                        return
-//                    }
-//                }
-//            }
-//            .resume()
-//        }
-=======
->>>>>>> 5800609474a9ca8f0d135ea8f45f4b572898eb28
 }
 
 
