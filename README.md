@@ -1,5 +1,7 @@
 # Eden - San Diego Hacks 2021
 
+![Demo](./AppDemo.gif)
+
 https://devpost.com/software/eden-wxb6je
 
 ## Inspiration

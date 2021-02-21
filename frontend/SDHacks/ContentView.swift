@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var login = true
     @State var map = false
     @State var isPresentingScanner = false
+
     var body: some View {
         ZStack {
             Home(login: $login, map: $map)
