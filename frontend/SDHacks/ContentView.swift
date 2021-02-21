@@ -18,7 +18,7 @@ struct ContentView: View {
                 .opacity(index == 0 ? 1 : 0)
             VStack{} //camera
                 .opacity(index == 1 ? 1 : 0)
-            VStack{} //profile
+            Profile() //profile
                 .opacity(index == 2 ? 1 : 0)
             if !login && !map {
                 MenuBar(index: $index).edgesIgnoringSafeArea(.all)
