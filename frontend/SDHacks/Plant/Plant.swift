@@ -33,7 +33,9 @@ struct Plant: View {
                             reportMsg = true
                         }) {
                             Image("Report")
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20, height: 20)
                                 .padding(.trailing, 25)
                         }
                     }.padding(.bottom, 10)
