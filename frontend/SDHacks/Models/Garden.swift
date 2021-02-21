@@ -14,6 +14,7 @@ struct Garden: Identifiable {
     let address: String
     let latitude: Double
     let longitude: Double
+    let zoom: Float
     var coordinate: GMSMarker {
         GMSMarker(position: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
     }

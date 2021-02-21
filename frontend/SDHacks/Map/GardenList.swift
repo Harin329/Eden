@@ -23,9 +23,12 @@ struct GardenList: View {
                 }) {
                     if showList {
                         Image(systemName: "chevron.down")
+                            .foregroundColor(Color(hex: "c4c4c4"))
                     }
                     else {
                         Image(systemName: "chevron.up")
+                            .foregroundColor(Color(hex: "c4c4c4"))
+
                     }
                 }
                 Spacer()
@@ -50,9 +53,9 @@ struct GardenList: View {
                             .foregroundColor(Color(hex: "#fff"))
                             .padding([.vertical],10)
                             .frame(width:130)
-                    }.background(Color(hex: "#255359"))
+                    }.background(Color(hex: "#3a3a3a"))
                 }
-                .cornerRadius(30)
+                .cornerRadius(10)
                 .padding()
             }
         }
@@ -69,29 +72,37 @@ struct GardenListCard: View {
     var garden: Garden
     var body: some View {
         HStack {
-            Rectangle()
-                .frame(width: 70, height: 70, alignment: .center)
+            Image(garden.name)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 90, height: 90, alignment: .center)
             VStack {
                 HStack {
                     Text(garden.name)
+                        .font(.system(size: 14))
                         .bold()
+                        .fixedSize(horizontal: false, vertical: true)
+
                     Spacer()
-                }.padding(.bottom, 3)
+                }.padding(.bottom, 1)
                 HStack {
                     Text(garden.address)
                         .font(.caption)
+                        .fixedSize(horizontal: false, vertical: true)
                     Spacer()
                 }
-            }
+            }.padding(.vertical, 5)
             Spacer()
             VStack{
                 Image(systemName: "multiply")
                     .font(.system(size: 10))
                 Spacer()
-            }.frame(height: 60)
+            }.frame(height: 80)
             .padding(.trailing, 5)
         }.frame(width: 290)
-        .background(Rectangle().fill(Color.gray).opacity(0.3))
+        .background(RoundedRectangle(cornerRadius: 5)
+                        .stroke(Color(hex:"e4e4e4")))
+        .padding(.bottom, 7)
     }
 }
 

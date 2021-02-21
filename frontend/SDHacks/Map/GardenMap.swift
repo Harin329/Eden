@@ -9,7 +9,7 @@ import GoogleMaps
 
 struct GardenMap: View {
     @State private var search: String = ""
-    @State var gardens = [Garden(name: "Garden 1", address: "111 garden lane", latitude: 32.7057, longitude: -117.1711), Garden(name: "Garden 2", address: "222 garden lane", latitude: 32.7257, longitude: -117.1511)]
+    @State var gardens = [Garden(name: "Golden Hill Community Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.731466, longitude: -117.147076, zoom: 13.0), Garden(name: "Smarts Farm Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.752228, longitude: -117.134545, zoom: 15.0),Garden(name: "The Villiage Community Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.758719, longitude: -117.190713, zoom: 15.0),Garden(name: "Intergen Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.708882, longitude: -117.156953, zoom: 15.0)]
     @State var selectedGarden: Garden?
     @State var showList = false
     @State var selectedGardens: [Garden] = []
@@ -56,49 +56,51 @@ struct GardenMap: View {
                     VStack {
                         VStack {
                             HStack {
+                                Image("pin")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 20, height: 20)
+                                    .rotationEffect(.degrees(45))
+                                Spacer()
+                            }
+                            HStack {
                                 Text(selectedGarden!.name)
                                     .bold()
-                                    .padding(.bottom, 5)
+                                    .font(.system(size: 14))
+                                    .padding(.bottom, 1)
                                 Spacer()
                             }
                             HStack {
                                 Text(selectedGarden!.address)
                                     .font(.caption)
                                     .fixedSize(horizontal: false, vertical: true)
-                                    .frame(width: 110)
                                     .padding(.trailing, 10)
+                                Spacer()
+                            }
+                            HStack {
+                                Spacer()
                                 VStack {
-                                    Button(action: {}) {
+                                    Button(action: {
+                                        selectedGardens.append(selectedGarden!)
+                                        selectedGarden = nil
+                                    }) {
                                         HStack {
-                                            Text("Directions")
+                                            Text("Add")
                                                 .font(.caption2)
                                                 .foregroundColor(Color(hex: "#fff"))
                                                 .padding([.vertical],10)
                                                 .frame(width:100)
-                                        }.background(Color(hex: "#255359"))
+                                        }.background(Color(hex: "#3a3a3a"))
                                     }.cornerRadius(10)
                                 }
                             }
                         }.padding()
-                        .frame(width: 250)
+                        .frame(width: 270)
                         .background(Rectangle()
                                         .fill(Color.white)
                                         .cornerRadius(10))
                         .padding(.top, 150)
                         Spacer()
-                        Button(action: {
-                            selectedGardens.append(selectedGarden!)
-                            selectedGarden = nil
-                        }) {
-                            HStack {
-                                Text("Select")
-                                    .foregroundColor(Color(hex: "#fff"))
-                                    .padding([.vertical],20)
-                                    .frame(width:220)
-                            }.background(Color(hex: "#255359"))
-                        }
-                        .cornerRadius(30)
-                        .padding(.bottom, 80)
                     }
                 }
             }
