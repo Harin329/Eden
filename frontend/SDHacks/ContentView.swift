@@ -16,7 +16,7 @@ struct ContentView: View {
             Home(login: $login, map: $map)
                 .edgesIgnoringSafeArea(.all)
                 .opacity(index == 0 ? 1 : 0)
-            VStack{} //camera
+            Camera() //camera
                 .opacity(index == 1 ? 1 : 0)
             Profile() //profile
                 .opacity(index == 2 ? 1 : 0)
