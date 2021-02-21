@@ -12,7 +12,8 @@ struct MenuBar : View {
     
     @Binding var index : Int
     @State var curvePos : CGFloat = 0
-    
+    @Binding var isPresentingScanner : Bool
+
     var body: some View{
         VStack {
             Spacer()
@@ -53,6 +54,7 @@ struct MenuBar : View {
                             Button(action: {
                                 withAnimation(.spring()){
                                     index = 1
+                                    isPresentingScanner = true
                                     self.curvePos = g.frame(in: .global).midX
                                 }
                             }, label: {

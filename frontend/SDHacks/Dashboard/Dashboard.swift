@@ -23,7 +23,7 @@ struct Dashboard: View {
                                 Text("Plants")
                                     .font(.custom("Poppins-Medium", size: 20))
                                     .foregroundColor(Color(hex: "3a3a3a"))
-                            }.padding(.trailing, 20)
+                            }.padding(.trailing, 15)
                             Button(action:{}) {
                                 Text("Saved")
                                     .font(.custom("Poppins-Medium", size: 20))
@@ -47,11 +47,9 @@ struct Dashboard: View {
                 .navigationBarHidden(true)
                 .offset(y: 0)
                 .background(
-                    Image("dashboardBG")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                        .offset(y: -85))
+                    Rectangle()
+                        .fill(Color(hex: "F4F1EF"))
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 400))
             }
         }.accentColor( Color(hex: "#000"))
     }

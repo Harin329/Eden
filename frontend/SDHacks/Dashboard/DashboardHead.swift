@@ -18,9 +18,10 @@ struct DashboardHead: View {
                         .font(.custom("Poppins-Regular", size: 15))
                         .foregroundColor(Color(hex: "3a3a3a"))
                     Spacer()
-                }
+                }.padding(.top, 10)
                 HStack {
                     DropDown()
+                        .offset(y: -15)
                     Spacer()
                 }
                 Spacer()

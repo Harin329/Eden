@@ -15,7 +15,7 @@ struct Plant: View {
     
     var body: some View {
         ZStack {
-
+            Color("F4F1EF")
             ScrollView(showsIndicators: false) {
                 VStack {
                     HStack {
@@ -55,30 +55,30 @@ struct Plant: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 30, height: 30)
                             .padding(.leading, 10)
-                        Image("Harvest")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 30, height: 30)
-                            .padding(.leading, 10)
+//                        Image("Harvest")
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fill)
+//                            .frame(width: 30, height: 30)
+//                            .padding(.leading, 10)
                         Spacer()
                     }.padding(.bottom, 10)
                     HStack {
                         VStack {
                             HStack {
                                 Text("#" + String(plantInfo.PlantID))
-                                    .font(.custom("Poppins-Regular", size: 9))
+                                    .font(.custom("Poppins-Regular", size: 13))
                                     .foregroundColor(Color(hex: "848484"))
                                 Spacer()
                             }.padding(.bottom, 1)
                             HStack {
                                 Text(plantInfo.PlantName)
-                                    .font(.custom("Poppins-Medium", size: 20))
+                                    .font(.custom("Poppins-Medium", size: 23))
                                     .foregroundColor(Color(hex: "3a3a3a"))
                                 Spacer()
                             }.padding(.bottom, 3)
                             HStack {
                                 Text(plantInfo.PlantType)
-                                    .font(.custom("Poppins-Regular", size: 13))
+                                    .font(.custom("Poppins-Regular", size: 15))
                                     .foregroundColor(Color(hex: "848484"))
                                 Spacer()
                             }
@@ -92,7 +92,7 @@ struct Plant: View {
                                         .foregroundColor(Color(hex: "848484"))
                                         .padding(.all, 5)
                                         .padding(.horizontal, 5)
-                                }.background(RoundedRectangle(cornerRadius: 10)
+                                }.background(RoundedRectangle(cornerRadius: 3)
                                                 .stroke(Color(hex:"848484"))
                                                 )
                             
@@ -117,17 +117,17 @@ struct Plant: View {
                                 VStack {
                                     HStack {
                                         Text("30")
-                                            .font(.custom("Poppins-Medium", size: 12))
+                                            .font(.custom("Poppins-Medium", size: 13))
                                             .foregroundColor(Color(hex: "68C883"))
                                         Spacer()
                                     }
                                     HStack{
                                         Text("Days")
-                                            .font(.custom("Poppins-Regular", size: 14))
+                                            .font(.custom("Poppins-Regular", size: 13))
                                             .foregroundColor(Color(hex: "3a3a3a"))
                                         Spacer()
                                     }
-                                }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
+                                }.frame(minWidth: 0, maxWidth: 90, alignment: .trailing)
                                 .padding(.trailing, 25)
                             }.padding(.bottom)
                             HStack {
@@ -139,17 +139,17 @@ struct Plant: View {
                                 VStack {
                                     HStack {
                                         Text("12 cm")
-                                            .font(.custom("Poppins-Medium", size: 12))
+                                            .font(.custom("Poppins-Medium", size: 13))
                                             .foregroundColor(Color(hex: "68C883"))
                                         Spacer()
                                     }
                                     HStack{
                                         Text("Height")
-                                            .font(.custom("Poppins-Regular", size: 14))
+                                            .font(.custom("Poppins-Regular", size: 13))
                                             .foregroundColor(Color(hex: "3a3a3a"))
                                         Spacer()
                                     }
-                                }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
+                                }.frame(minWidth: 0, maxWidth: 90, alignment: .trailing)
                                 .padding(.trailing, 25)
                             }.padding(.bottom)
                             HStack {
@@ -161,21 +161,23 @@ struct Plant: View {
                                 VStack {
                                     HStack {
                                         Text("Medium")
-                                            .font(.custom("Poppins-Medium", size: 12))
+                                            .font(.custom("Poppins-Medium", size: 13))
                                             .foregroundColor(Color(hex: "68C883"))
                                         Spacer()
                                     }
                                     HStack{
                                         Text("Water")
-                                            .font(.custom("Poppins-Regular", size: 14))
+                                            .font(.custom("Poppins-Regular", size: 13))
                                             .foregroundColor(Color(hex: "3a3a3a"))
                                         Spacer()
                                     }
-                                }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
+                                }.frame(minWidth: 0, maxWidth: 90, alignment: .trailing)
                                 .padding(.trailing, 25)
                             }
                         }
-                    }
+                    }.background(Rectangle()
+                                    .fill(Color("F4F1EF"))
+                                    )
                     HStack {
                         NavigationLink(destination: Contribution(plantInfo: plantInfo)) {
                             Text("Help me grow")
@@ -195,8 +197,11 @@ struct Plant: View {
                         .padding(.top, 30)
                 }
                 .padding(.top, 0)
-                .background(Color.white)
-            }.navigationBarTitle("")
+                .background(Rectangle()
+                                .fill(Color("F4F1EF"))
+                                )
+            }.background(Color("F4F1EF"))
+            .navigationBarTitle("")
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
             if reportMsg {

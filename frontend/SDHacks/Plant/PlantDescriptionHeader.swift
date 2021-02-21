@@ -16,21 +16,21 @@ struct PlantDescriptionHeader: View {
                 selected = "About"
             }) {
                 Text("About")
-                    .font(.custom("Poppins-Medium", size: 14))
+                    .font(.custom("Poppins-Medium", size: 15))
                     .foregroundColor(Color(hex: selected == "About" ? "3a3a3a" : "c9c9c9"))
             }.padding(.trailing, 15)
             Button(action: {
                 selected = "Care"
             }) {
                 Text("Care")
-                    .font(.custom("Poppins-Medium", size: 14))
+                    .font(.custom("Poppins-Medium", size: 15))
                     .foregroundColor(Color(hex: selected == "Care" ? "3a3a3a" : "c9c9c9"))
             }.padding(.trailing, 15)
             Button(action: {
                 selected = "Images"
             }) {
                 Text("Images")
-                    .font(.custom("Poppins-Medium", size: 14))
+                    .font(.custom("Poppins-Medium", size: 15))
                     .foregroundColor(Color(hex: selected == "Images" ? "3a3a3a" : "c9c9c9"))
             }
             Spacer()
@@ -46,8 +46,7 @@ struct PlantDescriptionHeader: View {
             .background(Rectangle()
                             .fill(Color.white)
                             .cornerRadius(8)
-                            .shadow(radius: 1 ))
-            .padding(.trailing, 10)
+                            .shadow(radius: 3 ))
         }.padding(.horizontal, 25)
     }
 }

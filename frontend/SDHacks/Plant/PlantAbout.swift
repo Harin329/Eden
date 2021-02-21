@@ -12,7 +12,7 @@ struct PlantAbout: View {
         VStack {
             HStack {
                 Text("Basil")
-                    .font(.custom("Poppins-Medium", size: 20))
+                    .font(.custom("Poppins-Medium", size: 23))
                     .foregroundColor(Color(hex: "3a3a3a"))
                 Spacer()
             }.padding(.top, 30)
@@ -23,10 +23,13 @@ struct PlantAbout: View {
                     .foregroundColor(Color(hex: "3a3a3a"))
                 Spacer()
             }.padding(.bottom, 2)
-            Text("Basil is a culinary herb of the family Lamiaceae. It is native to tropical regions from central Africa to Southeast Asia. It is a tender plant, and is used in cuisines worldwide.")
-                .font(.custom("Poppins-Light", size: 12))
-                .foregroundColor(Color(hex: "3a3a3a"))                .foregroundColor(Color(hex: "3a3a3a"))
-                .padding(.bottom, 20)
+            HStack {
+                Text("Basil is a culinary herb of the family Lamiaceae. It is native to tropical regions from central Africa to Southeast Asia. It is a tender plant, and is used in cuisines worldwide.")
+                    .font(.custom("Poppins-Light", size: 12))
+                    .foregroundColor(Color(hex: "3a3a3a"))
+                    .padding(.bottom, 20)
+                Spacer()
+            }
             HStack {
                 VStack {
                     HStack {

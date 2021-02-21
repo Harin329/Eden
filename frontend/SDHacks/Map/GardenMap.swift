@@ -9,7 +9,7 @@ import GoogleMaps
 
 struct GardenMap: View {
     @State private var search: String = ""
-    @State var gardens = [Garden(name: "Golden Hill Community Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.731466, longitude: -117.147076, zoom: 13.0), Garden(name: "Smarts Farm Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.752228, longitude: -117.134545, zoom: 15.0),Garden(name: "The Villiage Community Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.758719, longitude: -117.190713, zoom: 15.0),Garden(name: "Intergen Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.708882, longitude: -117.156953, zoom: 15.0)]
+    @State var gardens = [Garden(name: "Allen School Community Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.731466, longitude: -117.147076, zoom: 13.0), Garden(name: "Smarts Farm Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.752228, longitude: -117.134545, zoom: 15.0),Garden(name: "The Villiage Community Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.758719, longitude: -117.190713, zoom: 15.0),Garden(name: "Intergen Garden", address: "Address: 2440 Russ Blvd. San Diego 92102 ", latitude: 32.708882, longitude: -117.156953, zoom: 15.0)]
     @State var selectedGarden: Garden?
     @State var showList = false
     @State var selectedGardens: [Garden] = []

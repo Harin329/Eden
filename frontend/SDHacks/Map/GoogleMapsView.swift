@@ -285,7 +285,7 @@ struct MapView: UIViewRepresentable {
                 marker.map = mapView
             }
             let rectanglePath = GMSMutablePath()
-            if garden.name == "Golden Hill Community Garden" {
+            if garden.name == "Allen School Community Garden" {
                 rectanglePath.add(CLLocationCoordinate2D(latitude: 32.740821, longitude: -117.133811))
                 rectanglePath.add(CLLocationCoordinate2D(latitude: 32.732453, longitude: -117.133478))
                 rectanglePath.add(CLLocationCoordinate2D(latitude: 32.737040, longitude: -117.125574))

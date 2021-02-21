@@ -28,7 +28,7 @@ struct DropDown: View {
                     Image(systemName: expand ? "chevron.up" : "chevron.down")
                         .resizable()
                         .frame(width: 13, height: 6)
-                        .foregroundColor(Color(hex: "68C883"))
+                        .foregroundColor(Color(hex: "3a3a3a"))
                     Spacer()
                 }.onTapGesture {
                     self.expand.toggle()

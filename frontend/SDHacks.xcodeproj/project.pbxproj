@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,6 +51,7 @@
 		B800E8EB25E25D5C00557025 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B800E8D925E25D5C00557025 /* Poppins-ExtraLight.ttf */; };
 		B800E8EE25E25D5C00557025 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B800E8DC25E25D5C00557025 /* Poppins-Black.ttf */; };
 		B800E8EF25E25D5C00557025 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B800E8DD25E25D5C00557025 /* Poppins-Thin.ttf */; };
+		B800E90825E2831400557025 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = B800E90725E2831400557025 /* CodeScanner */; };
 		BE0BC99425E21BAD00B186D9 /* ContributionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC99325E21BAD00B186D9 /* ContributionDate.swift */; };
 		BE0BC99725E224BF00B186D9 /* ContributionCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC99625E224BF00B186D9 /* ContributionCamera.swift */; };
 		BE0BC99F25E23F6B00B186D9 /* ContributionConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC99E25E23F6B00B186D9 /* ContributionConfirmation.swift */; };
@@ -133,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B800E90825E2831400557025 /* CodeScanner in Frameworks */,
 				7D89CAB4E7AD73C5F9E9F086 /* Pods_SDHacks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +370,9 @@
 			dependencies = (
 			);
 			name = SDHacks;
+			packageProductDependencies = (
+				B800E90725E2831400557025 /* CodeScanner */,
+			);
 			productName = SDHacks;
 			productReference = B800E7EE25E0AAAB00557025 /* SDHacks.app */;
 			productType = "com.apple.product-type.application";
@@ -395,6 +400,9 @@
 				Base,
 			);
 			mainGroup = B800E7E525E0AAAB00557025;
+			packageReferences = (
+				B800E90625E2831400557025 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = B800E7EF25E0AAAB00557025 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -657,7 +665,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SDHacks/Preview Content\"";
-				DEVELOPMENT_TEAM = 35ZK849627;
+				DEVELOPMENT_TEAM = 4HBR3Z2SY9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SDHacks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -680,7 +688,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SDHacks/Preview Content\"";
-				DEVELOPMENT_TEAM = 35ZK849627;
+				DEVELOPMENT_TEAM = 4HBR3Z2SY9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SDHacks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -717,6 +725,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B800E90625E2831400557025 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B800E90725E2831400557025 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B800E90625E2831400557025 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B800E7E625E0AAAB00557025 /* Project object */;
 }
