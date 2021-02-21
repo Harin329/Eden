@@ -101,12 +101,12 @@ func Start() {
     // db.AutoMigrate(&User{})
     // db.AutoMigrate(&Contribution{})
 
-    // // Insert data rows into the "garden" table.
-    // db.Create(&Garden{GardenID: 1, Location: "4300 Allen School Lane, San Diego", Name:"Allen School Garden", Latitude: 32.656000, Longitude:-117.033400})
+    // Insert data rows into the "garden" table.
+    // db.Create(&Garden{GardenID: 1, Location: "4300 Allen School Lane, San Diego", Name:"Allen School", Latitude: 32.656000, Longitude:-117.033400})
     // db.Create(&Garden{GardenID: 2, Location: "30 Murray St, San Diego", Name:"Hilltop Drive", Latitude: 32.631480, Longitude:-117.063630})
-    // db.Create(&Garden{GardenID: 3, Location: "845 Broadway, San Diego", Name:"Intergenerational Community Garden", Latitude: 32.715550, Longitude:-117.156830})
-    // db.Create(&Garden{GardenID: 4, Location: "960 Fifth Ave, San Diego", Name:"Mosaic Community Garden of Chula Vista", Latitude: 32.715430, Longitude:-117.160460})
-    // db.Create(&Garden{GardenID: 5, Location: "171 Palomar St, San Diego", Name:"Palomar Apartments Community Garden", Latitude: 32.608700, Longitude:-117.060360})
+    // db.Create(&Garden{GardenID: 3, Location: "845 Broadway, San Diego", Name:"Intergen Garden", Latitude: 32.715550, Longitude:-117.156830})
+    // db.Create(&Garden{GardenID: 4, Location: "960 Fifth Ave, San Diego", Name:"Mosaic Chula Vista", Latitude: 32.715430, Longitude:-117.160460})
+    // db.Create(&Garden{GardenID: 5, Location: "171 Palomar St, San Diego", Name:"Palomar Apartments", Latitude: 32.608700, Longitude:-117.060360})
     // GetAllGardens()
 
     // db.Create(&Plot{PlotID: 1, GardenID: 1, Name: "E1"})
