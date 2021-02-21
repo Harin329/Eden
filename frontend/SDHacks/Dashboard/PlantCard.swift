@@ -50,7 +50,7 @@ struct PlantCard: View {
                 }.padding(.bottom, 1)
                 .padding(.leading, 10)
                 HStack {
-                    Text("#" + String(self.plantInfo.PlantID))
+                    Text(String(self.plantInfo.PlantType) + " #" + String(self.plantInfo.PlantID))
                         .font(.system(size: 14))
                         .foregroundColor(Color(hex: "757575"))
                     Spacer()

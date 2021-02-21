@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-struct PlantType: Codable, Hashable {
-    var PlantID: Int
-    var GardenID: Int
-    var PlotID: Int
-    var PlantType: String
-    var PlantName: String
-    var Instruction: String
-}
 
 struct Plant: View {
     var plantInfo: PlantType
@@ -78,7 +70,7 @@ struct Plant: View {
                 }.padding(.trailing, 25)
             }.padding(.bottom, 10)
             HStack {
-                Image(plantInfo.PlantType)
+                Image(plantInfo.PlantType + " Wiki")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)
