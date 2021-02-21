@@ -8,6 +8,8 @@
 import Foundation
 
 public var endpoint = "http://sdhacks2021.wl.r.appspot.com/"
+//public var endpoint = "http://iamgroot.space/"
+
 
 struct PlantEndpoints {
     static func createContribution(contribution: ContributionType) -> Int  {
