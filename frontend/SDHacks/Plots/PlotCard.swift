@@ -65,7 +65,7 @@ struct PlotCard: View {
             .background(Rectangle()
                             .fill(Color.white)
                             .cornerRadius(10)
-                            .shadow(radius: 5 )
+                            .shadow(radius: 2 )
                             .frame(width: 150)
             )
         }

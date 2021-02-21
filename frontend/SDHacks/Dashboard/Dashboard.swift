@@ -30,7 +30,7 @@ struct Dashboard: View {
                                     .foregroundColor(.gray)
                             }
                             Spacer()
-                            Button(action:{}) {
+                            NavigationLink(destination: Plots()) { 
                                 Text("See all")
                                     .font(.system(size: 18))
                                     .foregroundColor(.black)
@@ -45,6 +45,7 @@ struct Dashboard: View {
                     }.offset(y: 85)
                 }.navigationBarTitle("")
                 .navigationBarHidden(true)
+                .offset(y: 0)
                 .background(
                     Image("dashboardBG")
                         .resizable()
@@ -57,7 +58,7 @@ struct Dashboard: View {
     
 //    func getArticles() {
 //            guard let url = URL(string: "http://www.muse-magazine.com/wp-json/wp/v2/posts") else { return }
-//            
+//
 //            URLSession.shared.dataTask(with: url) { (data, response, error) in
 //                if let data = data {
 //                    if let response = try? JSONSerialization.jsonObject(with: data, options: []) {

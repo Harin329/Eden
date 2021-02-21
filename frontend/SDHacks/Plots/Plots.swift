@@ -8,39 +8,77 @@
 import SwiftUI
 
 struct Plots: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                VStack {
-                    HStack{
-                        Button(action: {}) {
-                            ZStack {
-                                Circle()
-                                    .fill(Color(hex: "EEF4EF"))
-                                    .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                Image("dashboardSearch")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 18)
+        ScrollView(showsIndicators: false) {
+            VStack {
+                HStack {
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                        }) {
+                            HStack {
+                            Image("Back") // set image here
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.white)
                             }
-                        }.padding(.trailing, 5)
-                        Button(action: {}) {
-                            ZStack {
-                                Circle()
-                                    .fill(Color(hex: "EEF4EF"))
-                                    .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                Image("dashboardMap")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 18)
-                            }
-                        }
-                    }.padding(.trailing, 25)
+                    }.padding(.leading, 25)
                     Spacer()
-                }
-            }
-        }.offset(y:50)
+                    VStack {
+                        HStack{
+                            Button(action: {}) {
+                                ZStack {
+                                    Circle()
+                                        .fill(Color(hex: "EEF4EF"))
+                                        .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    Image("dashboardSearch")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 18)
+                                }
+                            }.padding(.trailing, 5)
+                            Button(action: {}) {
+                                ZStack {
+                                    Circle()
+                                        .fill(Color(hex: "EEF4EF"))
+                                        .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    Image("dashboardMap")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 18)
+                                }
+                            }
+                        }.padding(.trailing, 25)
+                        Spacer()
+                    }
+                }.frame(height: 50)
+                HStack {
+                    Text("Plots")
+                        .font(.system(size: 26))
+                        .foregroundColor(Color(hex: "3A3A3A"))
+                    Spacer()
+                }.padding(.leading, 25)
+                HStack {
+                    PlotCard()
+                    Spacer()
+                    PlotCard()
+                }.padding(.horizontal, 25)
+                HStack {
+                    PlotCard()
+                    Spacer()
+                    PlotCard()
+                }.padding(.horizontal, 25)
+                HStack {
+                    PlotCard()
+                    Spacer()
+                }.padding(.horizontal, 25)
+            }.padding(.bottom, 70)
+            .padding(.top, 60)
+        }.navigationBarTitle("")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
+        .frame(height: UIScreen.main.bounds.height)
+        
     }
 }
 

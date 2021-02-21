@@ -12,8 +12,8 @@ struct Home: View {
     @State var map = false
     var body: some View {
         ZStack {
-            Plant()
-//            Dashboard()
+//            Plant()
+            Dashboard()
             GardenMap(map: $map)
                 .offset(y: map ? 0 : 1000)
                 .offset(y: login ? -1000 : 0)

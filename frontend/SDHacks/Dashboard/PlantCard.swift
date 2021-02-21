@@ -65,7 +65,7 @@ struct PlantCard: View {
             .background(Rectangle()
                             .fill(Color.white)
                             .cornerRadius(10)
-                            .shadow(radius: 5 )
+                            .shadow(radius: 3 )
                             .frame(width: 180)
             )
         }
