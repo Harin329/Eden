@@ -35,6 +35,7 @@
 		B800E86625E1C28700557025 /* Plots.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E86525E1C28700557025 /* Plots.swift */; };
 		B800E86925E1C33500557025 /* PlotCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E86825E1C33500557025 /* PlotCard.swift */; };
 		BEE631CF25E19C06009144B3 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631CE25E19C06009144B3 /* Plant.swift */; };
+		BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		B800E86525E1C28700557025 /* Plots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plots.swift; sourceTree = "<group>"; };
 		B800E86825E1C33500557025 /* PlotCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotCard.swift; sourceTree = "<group>"; };
 		BEE631CE25E19C06009144B3 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantEndpoints.swift; sourceTree = "<group>"; };
 		CC1C98A2817B19A9A6E4B254 /* Pods-SDHacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDHacks.debug.xcconfig"; path = "Target Support Files/Pods-SDHacks/Pods-SDHacks.debug.xcconfig"; sourceTree = "<group>"; };
 		E74D53B2350F54C97C12F028 /* Pods-SDHacks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDHacks.release.xcconfig"; path = "Target Support Files/Pods-SDHacks/Pods-SDHacks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				B800E80825E0ACD500557025 /* Map */,
 				B800E80725E0ACC500557025 /* Home */,
 				B800E7F125E0AAAB00557025 /* AppDelegate.swift */,
+				BEE631DB25E1CE46009144B3 /* Endpoints */,
 				B800E7F325E0AAAB00557025 /* SceneDelegate.swift */,
 				B800E7F525E0AAAB00557025 /* ContentView.swift */,
 				B800E7F725E0AAAC00557025 /* Assets.xcassets */,
@@ -224,6 +227,14 @@
 				BEE631CE25E19C06009144B3 /* Plant.swift */,
 			);
 			path = Plant;
+			sourceTree = "<group>";
+		};
+		BEE631DB25E1CE46009144B3 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +363,7 @@
 				B800E84925E191B500557025 /* DropDown.swift in Sources */,
 				B800E86925E1C33500557025 /* PlotCard.swift in Sources */,
 				B800E84D25E1922600557025 /* DashboardHead.swift in Sources */,
+				BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */,
 				B800E82525E0BE6B00557025 /* Onboarding.swift in Sources */,
 				B800E85425E19CAD00557025 /* PlantCard.swift in Sources */,
 				B800E84525E1180E00557025 /* Dashboard.swift in Sources */,
@@ -505,7 +517,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SDHacks/Preview Content\"";
-				DEVELOPMENT_TEAM = 4HBR3Z2SY9;
+				DEVELOPMENT_TEAM = 35ZK849627;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SDHacks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -528,7 +540,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SDHacks/Preview Content\"";
-				DEVELOPMENT_TEAM = 4HBR3Z2SY9;
+				DEVELOPMENT_TEAM = 35ZK849627;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SDHacks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;

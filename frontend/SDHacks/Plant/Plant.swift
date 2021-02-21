@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct PlantType {
-    var plant_id: Int
-    var garden_id: Int
-    var plot_id: Int
-    var plant_type: String
-    var plant_name: String
-    var instruction: String
+struct PlantType: Codable, Hashable {
+    var PlantID: Int
+    var GardenID: Int
+    var PlotID: Int
+    var PlantType: String
+    var PlantName: String
+    var Instruction: String
 }
 
 struct Plant: View {
@@ -52,15 +52,15 @@ struct Plant: View {
             HStack {
                 VStack {
                     HStack {
-                        Text("#F1256").font(.system(size: 14)).foregroundColor(Color(hex: "#848484"))
+                        Text("#" + String(plantInfo.PlantID)).font(.system(size: 14)).foregroundColor(Color(hex: "#848484"))
                         Spacer()
                     }.padding(.bottom, 1)
                     HStack {
-                        Text(plantInfo.plant_name).font(.system(size: 25)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
+                        Text(plantInfo.PlantName).font(.system(size: 25)).foregroundColor(Color(hex: "#3A3A3A")).fontWeight(.medium)
                         Spacer()
                     }.padding(.bottom, 3)
                     HStack {
-                        Text("Snake Plant").font(.system(size: 18)).foregroundColor(Color(hex: "#848484"))
+                        Text(plantInfo.PlantType).font(.system(size: 18)).foregroundColor(Color(hex: "#848484"))
                         Spacer()
                     }
                 }.padding(.leading, 30)
@@ -75,7 +75,7 @@ struct Plant: View {
                 }.padding(.trailing, 30)
             }.padding(.bottom, 10)
             HStack {
-                Image("Tomato Plant")
+                Image(plantInfo.PlantType)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 30)
                 Spacer()
