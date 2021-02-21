@@ -12,6 +12,6 @@ struct ContributionType: Codable, Hashable {
     var GardenID: Int
     var PlotID: Int
     var PlantID: Int
-    var Date: Date
+    var Date: String
     var ContributionType: String
 }

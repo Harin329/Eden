@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContributionDate: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var date: Date = Date()
+    var plantInfo: PlantType
+    var contributeType: String
     
     var body: some View {
         VStack {
             HStack {
-                Button(action: {}) {
+                Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
                         HStack {
                         Image("Back") // set image here
                             .aspectRatio(contentMode: .fit)
@@ -35,7 +38,7 @@ struct ContributionDate: View {
             }.padding(.top, 30)
             HStack {
                 Spacer()
-                Button(action: {}) {
+                NavigationLink(destination: ContributionCamera(plantInfo: plantInfo, contributeType: contributeType, contributeDate: date)) {
                     Text("Next")
                         .font(.system(size: 14))
                         .foregroundColor(Color.white)
@@ -50,12 +53,14 @@ struct ContributionDate: View {
             }
             Spacer()
         
-        }
+        }.navigationBarTitle("")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
-
-struct ContributionDate_Previews: PreviewProvider {
-    static var previews: some View {
-        ContributionDate()
-    }
-}
+//
+//struct ContributionDate_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContributionDate()
+//    }
+//}

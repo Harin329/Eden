@@ -160,7 +160,7 @@ struct Plant: View {
                         }
                     }
                     HStack {
-                        NavigationLink(destination: Contribution()) {
+                        NavigationLink(destination: Contribution(plantInfo: plantInfo)) {
                             Text("Help me grow")
                                 .font(.system(size: 14))
                                 .foregroundColor(Color.white)

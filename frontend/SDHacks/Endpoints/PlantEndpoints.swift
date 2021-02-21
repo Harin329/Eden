@@ -31,7 +31,7 @@ struct PlantEndpoints {
                     semaphore.signal()
                     return
                 }
-                // print(String(data: data, encoding: .utf8)!)
+                 print(String(data: data, encoding: .utf8)!)
                 do{
                     let jsonResponse = try JSONSerialization.jsonObject(with:data, options: [])
                     let jsonArray = jsonResponse as? [String: Any]

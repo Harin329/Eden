@@ -66,7 +66,7 @@ struct RecentContributors: View {
                         .cornerRadius(85)
                     Text("Pierce H")
                 }
-            }
+            }.padding(.bottom, 100)
         }.frame(width: UIScreen.main.bounds.width - 50)
     }
 }
