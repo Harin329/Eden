@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var index = 0
-    @State var login = false
+    @State var login = true
     @State var map = true
     var body: some View {
         ZStack {
