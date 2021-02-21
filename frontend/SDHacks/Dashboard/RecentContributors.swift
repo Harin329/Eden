@@ -17,36 +17,45 @@ struct RecentContributors: View {
             }.padding(.bottom, 20)
             HStack {
                 VStack {
-                    Image("person1")
+                    Image("harin")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 85, height: 85)
-                    Text("Username")
+                        .cornerRadius(85)
+                    Text("Harin W")
                 }
                 Spacer()
                 VStack {
-                    Image("person2")
+                    Image("jenny")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 85, height: 85)
-                    Text("Username")
+                    Text("Jenny C")
                 }
                 Spacer()
                 VStack {
-                    Image("person2")
+                    Image("sophia")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 85, height: 85)
-                    Text("Username")
+                    Text("Sophia C")
                 }
             }
             HStack {
                 VStack {
+                    Image("victor")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 85, height: 85)
+                    Text("Victor U")
+                }
+                Spacer()
+                VStack {
                     Image("person1")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 85, height: 85)
-                    Text("Username")
+                    Text("Mikayla L")
                 }
                 Spacer()
                 VStack {
@@ -54,15 +63,8 @@ struct RecentContributors: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 85, height: 85)
-                    Text("Username")
-                }
-                Spacer()
-                VStack {
-                    Image("person2")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 85, height: 85)
-                    Text("Username")
+                        .cornerRadius(85)
+                    Text("Pierce H")
                 }
             }
         }.frame(width: UIScreen.main.bounds.width - 50)

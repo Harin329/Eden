@@ -145,7 +145,7 @@ struct Plant: View {
                     }
                     HStack {
                         Button(action: {}, label: {
-                            Text("Help it grow")
+                            Text("Help me grow")
                                 .font(.system(size: 14))
                                 .foregroundColor(Color.white)
                                 .fontWeight(.medium)
