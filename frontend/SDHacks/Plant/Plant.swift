@@ -80,9 +80,10 @@ struct Plant: View {
                 HStack {
                     Image(plantInfo.PlantType + " Wiki")
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 200, height: 200)
-                    .clipped()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 190, height: 190)
+                    .cornerRadius(5)
+                    .padding(.leading, 25)
                     Spacer()
                     VStack {
                         HStack {
@@ -99,7 +100,7 @@ struct Plant: View {
                                     Spacer()
                                 }
                             }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
-                            .padding(.trailing, 30)
+                            .padding(.trailing, 25)
                         }.padding(.bottom)
                         HStack {
                             Image("Harvest")
@@ -115,7 +116,7 @@ struct Plant: View {
                                     Spacer()
                                 }
                             }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
-                            .padding(.trailing, 30)
+                            .padding(.trailing, 25)
                         }.padding(.bottom)
                         HStack {
                             Image("Harvest")
@@ -131,7 +132,7 @@ struct Plant: View {
                                     Spacer()
                                 }
                             }.frame(minWidth: 0, maxWidth: 80, alignment: .trailing)
-                            .padding(.trailing, 30)
+                            .padding(.trailing, 25)
                         }
                     }
                 }
@@ -142,13 +143,13 @@ struct Plant: View {
                             .foregroundColor(Color.white)
                             .fontWeight(.medium)
                             .padding(.vertical, 7)
-                            .padding(.horizontal, 28)
+                            .frame(width: 190)
                     })
                     .background(Color(hex: "#3A3A3A"))
                     .cornerRadius(5)
                     .padding(.top, 20)
                     Spacer()
-                }.padding(.leading, 30)
+                }.padding(.leading, 25)
                 Spacer()
                 PlantDescription()
                     .animation(.easeIn)
