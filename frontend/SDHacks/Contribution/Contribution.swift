@@ -9,7 +9,8 @@ import SwiftUI
 
 struct Contribution: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
+    var plantInfo: PlantType
+    
     var body: some View {
         VStack {
             HStack {
@@ -33,7 +34,7 @@ struct Contribution: View {
                 Spacer()
             }
             VStack {
-                Button(action: {}) {
+                NavigationLink(destination: ContributionDate(plantInfo: plantInfo, contributeType: "Trim")) {
                     Image("Trim")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -49,7 +50,7 @@ struct Contribution: View {
                 }.background(RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(hex:"848484")).frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 )
-                Button(action: {}) {
+                NavigationLink(destination: ContributionDate(plantInfo: plantInfo, contributeType: "Water")) {
                     Image("Water")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -65,7 +66,7 @@ struct Contribution: View {
                 }.background(RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(hex:"848484")).frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 )
-                Button(action: {}) {
+                NavigationLink(destination: ContributionDate(plantInfo: plantInfo, contributeType: "Harvest")) {
                     Image("Harvest")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -81,7 +82,7 @@ struct Contribution: View {
                 }.background(RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color(hex:"848484")).frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 )
-                Button(action: {}) {
+                NavigationLink(destination: ContributionDate(plantInfo: plantInfo, contributeType: "Fertilize")) {
                     Image("Fertilize")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -121,8 +122,8 @@ struct Contribution: View {
     }
 }
 
-struct Contribution_Previews: PreviewProvider {
-    static var previews: some View {
-        Contribution()
-    }
-}
+//struct Contribution_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Contribution()
+//    }
+//}
