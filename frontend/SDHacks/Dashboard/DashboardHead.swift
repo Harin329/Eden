@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DashboardHead: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     var body: some View {
         HStack {
             VStack {
@@ -36,7 +38,7 @@ struct DashboardHead: View {
                                 .frame(width: 18)
                         }
                     }.padding(.trailing, 5)
-                    Button(action: {}) {
+                    NavigationLink(destination: Blueprint()) {
                         ZStack {
                             Circle()
                                 .fill(Color.white)
@@ -49,7 +51,9 @@ struct DashboardHead: View {
                     }
                 }.padding(.trailing, 25)
                 Spacer()
-            }
+            }.navigationBarTitle("")
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
         }
     }
 }

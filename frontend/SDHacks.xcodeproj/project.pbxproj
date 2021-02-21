@@ -47,6 +47,7 @@
 		BE0BC9A225E2483400B186D9 /* Thanks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC9A125E2483400B186D9 /* Thanks.swift */; };
 		BE0BC9AA25E2549A00B186D9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC9A925E2549A00B186D9 /* Profile.swift */; };
 		BE0BC9B225E2596B00B186D9 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC9B125E2596B00B186D9 /* Calendar.swift */; };
+		BE0BC9B725E25C6800B186D9 /* Blueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0BC9B625E25C6800B186D9 /* Blueprint.swift */; };
 		BEE631CF25E19C06009144B3 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631CE25E19C06009144B3 /* Plant.swift */; };
 		BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */; };
 		BEE631E925E1E6C8009144B3 /* PlantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631E825E1E6C8009144B3 /* PlantType.swift */; };
@@ -96,6 +97,7 @@
 		BE0BC9A125E2483400B186D9 /* Thanks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thanks.swift; sourceTree = "<group>"; };
 		BE0BC9A925E2549A00B186D9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		BE0BC9B125E2596B00B186D9 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		BE0BC9B625E25C6800B186D9 /* Blueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blueprint.swift; sourceTree = "<group>"; };
 		BEE631CE25E19C06009144B3 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantEndpoints.swift; sourceTree = "<group>"; };
 		BEE631E825E1E6C8009144B3 /* PlantType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantType.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				B800E82025E0B02D00557025 /* SearchBar.swift */,
 				B800E83025E0C94500557025 /* GoogleMapsView.swift */,
 				B800E84025E1089D00557025 /* GardenList.swift */,
+				BE0BC9B625E25C6800B186D9 /* Blueprint.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				B800E82925E0C01D00557025 /* Signup.swift in Sources */,
 				BEE631E925E1E6C8009144B3 /* PlantType.swift in Sources */,
 				B800E84925E191B500557025 /* DropDown.swift in Sources */,
+				BE0BC9B725E25C6800B186D9 /* Blueprint.swift in Sources */,
 				B800E88825E2044A00557025 /* Contribution.swift in Sources */,
 				BE0BC9AA25E2549A00B186D9 /* Profile.swift in Sources */,
 				B800E86925E1C33500557025 /* PlotCard.swift in Sources */,
@@ -601,7 +605,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SDHacks/Preview Content\"";
-				DEVELOPMENT_TEAM = 4HBR3Z2SY9;
+				DEVELOPMENT_TEAM = 35ZK849627;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SDHacks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -624,7 +628,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SDHacks/Preview Content\"";
-				DEVELOPMENT_TEAM = 4HBR3Z2SY9;
+				DEVELOPMENT_TEAM = 35ZK849627;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SDHacks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;

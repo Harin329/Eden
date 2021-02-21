@@ -117,7 +117,8 @@ struct Calendar: View {
                     }.background(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color(hex:"848484")).frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     )
-                }.padding(.top, 30)
+                }.padding(.top, 30).padding(.bottom, 100)
+                
                 Spacer()
             }
         }
