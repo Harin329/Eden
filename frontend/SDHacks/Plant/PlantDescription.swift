@@ -8,26 +8,32 @@
 import SwiftUI
 
 struct PlantDescription: View {
+    @State var selected = "About"
     var body: some View {
         VStack {
-            HStack {
-                Button(action: {}) {
-                    Text("About")
-                        .font(.system(size: 18))
-                        .foregroundColor(Color(hex: "3a3a3a"))
-                }
-                Button(action: {}) {
-                    Text("Care")
-                }
-                Button(action: {}) {
-                    Text("Image")
-                }
-                Spacer()
-                Button(action: {}) {
-                    Text("<3")
-                }
-            }.padding(.horizontal, 25)
+            PlantDescriptionHeader(selected: $selected)
+            if selected == "About" {
+                PlantAbout()
+            }
+            else if selected == "Care" {
+                PlantCare()
+            }
+            else {
+                Image("Gallery")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: UIScreen.main.bounds.width - 50)
+                    .padding(.top, 30)
+            }
+            Spacer()
         }
+        .frame(minHeight: 300)
+        .padding(.top, 20)
+        .padding(.bottom, selected == "Images" ? 0 : 30)
+        .background(Rectangle()
+                        .fill(Color.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 2))
     }
 }
 

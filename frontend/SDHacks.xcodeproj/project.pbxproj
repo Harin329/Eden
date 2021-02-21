@@ -35,6 +35,9 @@
 		B800E86625E1C28700557025 /* Plots.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E86525E1C28700557025 /* Plots.swift */; };
 		B800E86925E1C33500557025 /* PlotCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E86825E1C33500557025 /* PlotCard.swift */; };
 		B800E86C25E1E0B900557025 /* PlantDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E86B25E1E0B900557025 /* PlantDescription.swift */; };
+		B800E87925E1ED8B00557025 /* PlantDescriptionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E87825E1ED8B00557025 /* PlantDescriptionHeader.swift */; };
+		B800E87C25E1F07600557025 /* PlantAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E87B25E1F07600557025 /* PlantAbout.swift */; };
+		B800E87F25E1F20D00557025 /* PlantCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = B800E87E25E1F20D00557025 /* PlantCare.swift */; };
 		BEE631CF25E19C06009144B3 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631CE25E19C06009144B3 /* Plant.swift */; };
 		BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */; };
 		BEE631E925E1E6C8009144B3 /* PlantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE631E825E1E6C8009144B3 /* PlantType.swift */; };
@@ -71,6 +74,9 @@
 		B800E86525E1C28700557025 /* Plots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plots.swift; sourceTree = "<group>"; };
 		B800E86825E1C33500557025 /* PlotCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotCard.swift; sourceTree = "<group>"; };
 		B800E86B25E1E0B900557025 /* PlantDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDescription.swift; sourceTree = "<group>"; };
+		B800E87825E1ED8B00557025 /* PlantDescriptionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDescriptionHeader.swift; sourceTree = "<group>"; };
+		B800E87B25E1F07600557025 /* PlantAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAbout.swift; sourceTree = "<group>"; };
+		B800E87E25E1F20D00557025 /* PlantCare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCare.swift; sourceTree = "<group>"; };
 		BEE631CE25E19C06009144B3 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		BEE631DC25E1CE5B009144B3 /* PlantEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantEndpoints.swift; sourceTree = "<group>"; };
 		BEE631E825E1E6C8009144B3 /* PlantType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantType.swift; sourceTree = "<group>"; };
@@ -231,6 +237,9 @@
 			children = (
 				BEE631CE25E19C06009144B3 /* Plant.swift */,
 				B800E86B25E1E0B900557025 /* PlantDescription.swift */,
+				B800E87825E1ED8B00557025 /* PlantDescriptionHeader.swift */,
+				B800E87B25E1F07600557025 /* PlantAbout.swift */,
+				B800E87E25E1F20D00557025 /* PlantCare.swift */,
 			);
 			path = Plant;
 			sourceTree = "<group>";
@@ -370,7 +379,9 @@
 				BEE631E925E1E6C8009144B3 /* PlantType.swift in Sources */,
 				B800E84925E191B500557025 /* DropDown.swift in Sources */,
 				B800E86925E1C33500557025 /* PlotCard.swift in Sources */,
+				B800E87F25E1F20D00557025 /* PlantCare.swift in Sources */,
 				B800E84D25E1922600557025 /* DashboardHead.swift in Sources */,
+				B800E87925E1ED8B00557025 /* PlantDescriptionHeader.swift in Sources */,
 				BEE631DD25E1CE5B009144B3 /* PlantEndpoints.swift in Sources */,
 				B800E82525E0BE6B00557025 /* Onboarding.swift in Sources */,
 				B800E85425E19CAD00557025 /* PlantCard.swift in Sources */,
@@ -382,6 +393,7 @@
 				B800E83525E0CA3800557025 /* LocationManager.swift in Sources */,
 				B800E86625E1C28700557025 /* Plots.swift in Sources */,
 				B800E82125E0B02D00557025 /* SearchBar.swift in Sources */,
+				B800E87C25E1F07600557025 /* PlantAbout.swift in Sources */,
 				B800E81E25E0AF4900557025 /* HexColor.swift in Sources */,
 				B800E7F625E0AAAB00557025 /* ContentView.swift in Sources */,
 			);
