@@ -160,14 +160,14 @@ struct Plant: View {
                         }
                     }
                     HStack {
-                        Button(action: {}, label: {
+                        NavigationLink(destination: Contribution()) {
                             Text("Help me grow")
                                 .font(.system(size: 14))
                                 .foregroundColor(Color.white)
                                 .fontWeight(.medium)
                                 .padding(.vertical, 7)
                                 .frame(width: 190)
-                        })
+                        }
                         .background(Color(hex: "#3A3A3A"))
                         .cornerRadius(5)
                         .padding(.top, 20)

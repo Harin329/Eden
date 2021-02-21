@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct Contribution: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
     var body: some View {
         VStack {
             HStack {
-                Button(action: {}) {
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                    }) {
                         HStack {
                         Image("Back") // set image here
                             .aspectRatio(contentMode: .fit)
@@ -111,7 +115,9 @@ struct Contribution: View {
             }
             Spacer()
         
-        }
+        }.navigationBarTitle("")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 
