@@ -145,7 +145,7 @@ struct Plant: View {
                 }
                 HStack {
                     Button(action: {}, label: {
-                        Text("Help me grow")
+                        Text("Help it grow")
                             .font(.system(size: 14))
                             .foregroundColor(Color.white)
                             .fontWeight(.medium)
@@ -153,7 +153,8 @@ struct Plant: View {
                             .padding(.horizontal, 28)
                     })
                     .background(Color(hex: "#3A3A3A"))
-                    .cornerRadius(10)
+                    .cornerRadius(5)
+                    .padding(.top, 20)
                     Spacer()
                 }.padding(.leading, 30)
                 Spacer()
@@ -161,7 +162,7 @@ struct Plant: View {
                     .animation(.easeIn)
                     .padding(.top, 30)
             }
-            .padding(.top, 40)
+            .padding(.top, 0)
             .background(Color.white)
         }.navigationBarTitle("")
         .navigationBarBackButtonHidden(true)

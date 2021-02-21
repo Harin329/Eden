@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlantDescriptionHeader: View {
     @Binding var selected: String
+    @State var heart = false
     var body: some View {
         HStack {
             Button(action: {
@@ -33,8 +34,10 @@ struct PlantDescriptionHeader: View {
                     .foregroundColor(Color(hex: selected == "Images" ? "3a3a3a" : "c9c9c9"))
             }
             Spacer()
-            Button(action: {}) {
-                Image("Heart")
+            Button(action: {
+                heart.toggle()
+            }) {
+                Image(heart ? "HeartFill" : "Heart")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20, height: 20)
